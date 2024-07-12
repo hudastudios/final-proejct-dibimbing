@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/GeneralSans-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/GeneralSans-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/GeneralSans-Bold.otf");
+  font-weight: 600;
+}
