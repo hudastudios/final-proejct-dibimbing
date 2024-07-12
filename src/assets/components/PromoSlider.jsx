@@ -49,7 +49,7 @@ export default function AutoPlay() {
 
     return (
         <div className="flex items-center justify-center ">
-            <div className=" w-[1160px] h-[400px] [mask-image:_linear-gradient(to_right,transparent_0,_black_20px,_black_calc(100%-20px),transparent_100%)]">
+            <div className=" w-[1160px] h-[420px] [mask-image:_linear-gradient(to_right,transparent_0,_black_20px,_black_calc(100%-20px),transparent_100%)]">
                 <Slider {...settings}>
                     {detail.map((item) => (<div className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01]">
                         <div className="flex flex-col items-center gap-2">
