@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export function HomeBanner() {
+export default function HomeBanner() {
     const [detail, setDetail] = useState({})
     const [detailtwo, setDetailTwo] = useState({})
     const [detailthree, setDetailThree] = useState({})

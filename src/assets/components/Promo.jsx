@@ -1,52 +1,6 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import AutoPlay from "./PromoSlider";
 
-
 export default function Promo() {
-    const [detail, setDetail] = useState([])
-
-    const getPromo = async () => {
-
-        try {
-            const response = await axios.get(
-                'https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/promos',
-                {
-                    headers: {
-                        apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
-                    },
-                }
-            );
-            setDetail(response.data.data);
-            // console.log(response.data);
-
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        getPromo();
-    }, []);
-
-    const currency = new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-    })
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear"
-    };
 
     return (
         <div
