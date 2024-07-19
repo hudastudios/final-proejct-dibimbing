@@ -1,4 +1,5 @@
 import ActivitySlide from "./ActivitySLide";
+import { Link } from "react-router-dom";
 
 export default function Activity() {
     return (
@@ -9,7 +10,7 @@ export default function Activity() {
                 className="w-[1199px] flex flex-row items-start justify-center gap-[96px] max-w-full lg:gap-[48px] mq1050:gap-0 mq750:gap-[0px] mq1050:flex-wrap"
             >
                 <div
-                    className="h-[583px] w-[530px] mq750:hidden flex flex-row items-start justify-start relative min-w-[530px] max-w-full mq750:min-w-full mq1050:flex-1"
+                    className="h-[583px] w-[530px] mq750:hidden flex flex-row items-start justify-center relative min-w-[530px] max-w-full mq750:min-w-full mq1050:flex-1"
                 >
                     <ActivitySlide></ActivitySlide>
                 </div>
@@ -35,9 +36,9 @@ export default function Activity() {
                                 </div>
                             </div>
                             <h1
-                                className="m-0 self-stretch relative text-29xl tracking-[0.01em] leading-[64px] font-semibold font-inherit text-grayscale-900 mq750:text-10xl mq750:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
+                                className="m-0 self-stretch relative text-[40px] tracking-[0.01em] leading-[64px] font-semibold font-inherit text-grayscale-900 mq750:text-10xl mq750:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
                             >
-                                All the best places to travel, curated by you
+                                The best places to travel, curated by Activities
                             </h1>
                             <div
                                 className="w-[473px] relative text-base tracking-[0.01em] leading-[24px] text-gray-400 inline-block max-w-full"
@@ -48,84 +49,21 @@ export default function Activity() {
                                 minute trips and hotels from a range of travel brands,
                             </div>
                         </div>
-                        <div
-                            className="flex flex-row mq1050:flex-wrap items-center justify-center mq1050:justify-start gap-[32px] max-w-full text-5xl text-grayscale-900 mq750:flex-wrap mq750:gap-[16px]"
-                        >
-                            <div
-                                className="flex flex-row items-center justify-start gap-[11px]"
+                        <Link to='/Activity'>
+                            <button
+                                className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-start justify-start"
                             >
                                 <div
-                                    className="flex flex-row items-center justify-start gap-[7px]"
+                                    className="rounded-13xl overflow-hidden flex flex-row items-start justify-start py-3.5 pr-[30px] pl-[31px] whitespace-nowrap border-[1px] border-solid border-whitesmoke-200"
                                 >
-                                    <img
-                                        className="h-8 w-8 relative min-h-[32px]"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/award.svg"
-                                    />
-
                                     <div
-                                        className="relative tracking-[0.01em] leading-[32px] font-semibold inline-block min-w-[24px] mq750:text-lgi mq750:leading-[26px]"
+                                        className="relative text-base tracking-[0.01em] leading-[24px] font-medium font-large-regular text-grayscale-900 text-left inline-block min-w-[58px]"
                                     >
-                                        15
+                                        View All Activities
                                     </div>
                                 </div>
-                                <div
-                                    className="relative text-sm tracking-[0.01em] leading-[20px] text-gray-400"
-                                >
-                                    <p className="m-0">Years of</p>
-                                    <p className="m-0">experience</p>
-                                </div>
-                            </div>
-                            <div
-                                className="flex flex-row items-center justify-start gap-[12px]"
-                            >
-                                <div
-                                    className="flex flex-row items-center justify-start gap-[6px]"
-                                >
-                                    <input
-                                        className="cursor-pointer m-0 h-8 w-8 relative min-h-[32px]"
-                                        type="radio"
-                                    />
-
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[32px] font-semibold inline-block min-w-[41px] mq750:text-lgi mq750:leading-[26px]"
-                                    >
-                                        12K
-                                    </div>
-                                </div>
-                                <div
-                                    className="relative text-sm tracking-[0.01em] leading-[20px] text-gray-400"
-                                >
-                                    <p className="m-0">Succesfull</p>
-                                    <p className="m-0">trips</p>
-                                </div>
-                            </div>
-                            <div
-                                className="flex flex-row items-center justify-start gap-[11px]"
-                            >
-                                <div
-                                    className="flex flex-row items-center justify-start gap-[6px]"
-                                >
-                                    <input
-                                        className="cursor-pointer m-0 h-8 w-8 relative min-h-[32px]"
-                                        type="radio"
-                                    />
-
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[32px] font-semibold inline-block min-w-[57px] mq750:text-lgi mq750:leading-[26px]"
-                                    >
-                                        95%
-                                    </div>
-                                </div>
-                                <div
-                                    className="relative text-sm tracking-[0.01em] leading-[20px] text-gray-400"
-                                >
-                                    <p className="m-0">Happy</p>
-                                    <p className="m-0">customers</p>
-                                </div>
-                            </div>
-                        </div>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

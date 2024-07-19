@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, onClose, logoutmodal }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,46 +16,54 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
     }
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-30 self-center items-center justify-center">
+        <div className="fixed top-0 left-0 right-0 z-[100] self-center items-center justify-center mq500:z-0 mq500:h-0">
             <div
-                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 mq750:pl-[1.25rem] box-border space-x-[321.5px] mq1150:space-x-[200px] mq1050:space-x-[200px] mq920:space-x-[140px] mq800:space-x-[100px] mq750:space-x-[200px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq450:gap-10 mq mq750:gap-[40px] mq750:pt-[10px] mq750:pb-[10px]">
-                <div
-                    className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0"
-                >
-                    <div className="flex flex-row items-start justify-start gap-[4px]">
-                        <div
-                            className="flex flex-col items-start justify-start pt-px px-0 pb-0"
-                        >
-                            <img
-                                className="w-6 h-6 relative overflow-hidden shrink-0"
-                                loading="lazy"
-                                alt=""
-                                src="/radar.svg"
-                            />
+                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 box-border space-x-[321.5px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq500:space-x-[180px] mq1050:space-x-[200px] ">
+                <Link to='/'>
+                    <div
+                        className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0"
+                    >
+                        <div className="flex flex-row items-start justify-start gap-[4px] pl-[10px]">
+                            <div
+                                className="flex flex-col items-start justify-start pt-px px-0 pb-0"
+                            >
+                                <img
+                                    className="w-6 h-6 relative overflow-hidden shrink-0"
+                                    loading="lazy"
+                                    alt=""
+                                    src="/radar.svg"
+                                />
+                            </div>
+                            <div
+                                className="[text-decoration:none] relative tracking-[0.01em] leading-[26px] font-semibold text-[inherit] inline-block min-w-[64px] whitespace-nowrap"
+                            >Gaskan.id</div>
                         </div>
-                        <div
-                            className="[text-decoration:none] relative tracking-[0.01em] leading-[26px] font-semibold text-[inherit] inline-block min-w-[64px] whitespace-nowrap"
-                        >Gaskan.id</div>
                     </div>
-                </div>
+                </Link>
                 <nav
-                    className="m-0 w-[424px] flex flex-col items-start justify-start pt-2 px-0 pb-0 box-border max-w-full mq750:hidden"
+                    className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden mw1440:w-[800px] "
                 >
                     <nav
-                        className="m-0 self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular"
+                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mw768:gap-[80px] mw1680:gap-[200px]"
                     >
-                        <a
-                            className="[text-decoration:none] relative tracking-[0.01em] leading-[24px] font-medium text-[inherit] inline-block min-w-[66px]"
-                        >Discover</a>
-                        <a
-                            className="[text-decoration:none] relative tracking-[0.01em] leading-[24px] font-medium text-[inherit] inline-block min-w-[97px]"
-                        >Destinations</a>
-                        <a
-                            className="[text-decoration:none] relative tracking-[0.01em] leading-[24px] font-medium text-[inherit] inline-block min-w-[63px]"
-                        >Contact</a>
-                        <a
-                            className="[text-decoration:none] relative tracking-[0.01em] leading-[24px] font-medium text-[inherit] inline-block min-w-[33px]"
-                        >FAQ</a>
+                        <Link to='/'>
+                            <div
+                                className="[text-decoration:none] relative tracking-[0.01em] leading-[24px] font-medium text-[inherit] inline-block"
+                            >Home
+                            </div>
+                        </Link>
+                        <Link to={token ? '/Promo' : null}>
+                            <div onClick={token ? null : onOpenLoginModal}
+                                className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
+                            >Promo
+                            </div>
+                        </Link>
+                        <Link to={token ? '/Activity' : null}>
+                            <div onClick={token ? null : onOpenLoginModal}
+                                className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
+                            >Activity
+                            </div>
+                        </Link>
                     </nav>
                 </nav>
                 <div
@@ -103,7 +112,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
 
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400 mw750:hidden"
+                        className="flex items-center py-2 rounded text-black-500 hover:text-black-400 mw750:hidden"
                     >
                         <img
                             className={`h-10 w-10 relative rounded-[40px] overflow-hidden shrink-0 ${isOpen ? "hidden" : "block"}`}

@@ -1,10 +1,11 @@
 import AutoPlay from "./PromoSlider";
+import { Link } from "react-router-dom";
 
-export default function Promo() {
+export default function Promo({ onOpenLoginModal }) {
 
     return (
         <div
-            className="w-[1200px] flex flex-col items-start justify-start gap-[48px] max-w-full mq750:gap-[24px] px-[20px] "
+            className="w-[1200px] flex flex-col items-start mq500:items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] px-[20px] mq500:px-0 "
         >
             < div
                 className="self-stretch flex flex-row items-start justify-between mq1050:justify-center max-w-full gap-[20px] mq1050:flex-wrap"
@@ -30,23 +31,25 @@ export default function Promo() {
                 </div>
 
             </div>
-            <AutoPlay></AutoPlay>
+            <AutoPlay onOpenLoginModal={onOpenLoginModal}></AutoPlay>
             <div
                 className="self-stretch flex flex-row items-start justify-center py-0 px-5"
             >
-                <button
-                    className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-start justify-start"
-                >
-                    <div
-                        className="rounded-13xl overflow-hidden flex flex-row items-start justify-start py-3.5 pr-[30px] pl-[31px] whitespace-nowrap border-[1px] border-solid border-whitesmoke-200"
+                <Link to='/Promo'>
+                    <button
+                        className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-start justify-start"
                     >
                         <div
-                            className="relative text-base tracking-[0.01em] leading-[24px] font-medium font-large-regular text-grayscale-900 text-left inline-block min-w-[58px]"
+                            className="rounded-13xl overflow-hidden flex flex-row items-start justify-start py-3.5 pr-[30px] pl-[31px] whitespace-nowrap border-[1px] border-solid border-whitesmoke-200"
                         >
-                            View all
+                            <div
+                                className="relative text-base tracking-[0.01em] leading-[24px] font-medium font-large-regular text-grayscale-900 text-left inline-block min-w-[58px]"
+                            >
+                                View All Promo
+                            </div>
                         </div>
-                    </div>
-                </button>
+                    </button>
+                </Link>
             </div>
         </div >
     );

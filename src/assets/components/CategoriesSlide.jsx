@@ -37,15 +37,51 @@ function CategoriesSlide() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnHover: true
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 500,
+                settings: {
+                    className: "center",
+                    infinite: true,
+                    centerPadding: "120px",
+                    slidesToShow: 6,
+                    swipeToSlide: true,
+                    autoplay: true,
+                    afterChange: function (index) {
+                        console.log(
+                            `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+                        );
+                    }
+                }
+            },
+            {
+                breakpoint: 430,
+                settings: {
+                    className: "center",
+                    infinite: true,
+                    centerPadding: "120px",
+                    slidesToShow: 4,
+                    swipeToSlide: true,
+                    autoplay: true,
+                    afterChange: function (index) {
+                        console.log(
+                            `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+                        );
+                    }
+                }
+            }
+        ]
+
+
     };
     return (
-        <div className="flex justify-center items-center">
-            <div className="h-[150px] w-[1120px] ">
-                <Slider {...settings}>
-                    {detail.map((item) => (<div className="hover:scale-[1.2]"
+        <div className="flex justify-center items-center gap-[200px] ">
+            <div className="h-[150px] w-[1120px] mq500:w-[600px] mq500:ml-[0px]">
+                <Slider {...settings} className="">
+                    {detail.map((item) => (<div className="hover:scale-[1.2] mq500:hover:scale-100"
                     >
-                        <div className=" flex items-center justify-center gap-6 pl-[80px] pt-4">
+                        <div className=" flex items-center justify-center gap-6 pl-[80px] mq500:pl-0 mq500:flex-col pt-4">
                             <div className="z-[2] h-[120px] w-[120px] rounded-[50%] bg-green-700 bg-opacity-20">
                                 <img
                                     className="z-[1] h-[120px] w-[120px] relative rounded-[50%] mq750:flex-1 object-cover mix-blend-overlay"
@@ -55,7 +91,7 @@ function CategoriesSlide() {
                                 />
                             </div>
                             <div
-                                className="flex-1 flex flex-col items-start mq1050:items-center mq750:items-start justify-start min-w-[88px]"
+                                className="flex-1 flex flex-col items-start mq500:items-center mq500:justify-center mq1050:items-center mq750:items-start justify-start min-w-[88px]"
                             >
                                 <div
                                     className="font-medium text-[18px]"
@@ -68,6 +104,7 @@ function CategoriesSlide() {
                 </Slider>
             </div>
         </div>
+
     );
 }
 

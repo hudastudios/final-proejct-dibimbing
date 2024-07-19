@@ -27,10 +27,14 @@ export default {
           "300": "#8e8e8e",
           "400": "#7d7c84",
           "500": "rgba(252, 252, 253, 0.08)",
+          "600": "#fefeff",
         },
         whitesmoke: {
           "100": "#f9f9f9",
           "200": "#e9ebed",
+        },
+        "grayscale-300": {
+          "400": "#7d7c84",
         },
         "primary-1": "#3b71fe",
         "grayscale-900": "#09080d",
@@ -40,6 +44,11 @@ export default {
           "200": "#58c17d",
         },
         sandybrown: "#ed9039",
+        gainsboro: "#e3e3e3",
+        darkslategray: {
+          "100": "#3d3b40",
+          "200": "#292d32",
+        },
         "grayscale-400": "#5e5d65",
         lightgray: "#cfd1d4",
         white: "#fff",
@@ -50,10 +59,16 @@ export default {
       fontFamily: {
         "large-regular": "'General Sans'",
         "xtra-large-semibold": "Poppins",
+        "body-text-small-semibold": "'Nunito Sans'",
       },
       borderRadius: {
+        "71xl": "90px",
+        "81xl": "100px",
+        "21xl": "40px",
         "13xl": "32px",
+        "61xl": "80px",
         "211xl": "230px",
+        "29xl": "48px",
         xl: "20px",
       },
     },
@@ -67,6 +82,7 @@ export default {
       "5xl": "24px",
       lgi: "19px",
       xs: "12px",
+      "5xl": "24px",
       xl: "20px",
       "45xl": "64px",
       inherit: "inherit",
@@ -102,14 +118,26 @@ export default {
       mq660: {
         raw: "screen and (max-width: 660px)",
       },
+      mq500: {
+        raw: "screen and (max-width: 500px)",
+      },
       mq450: {
         raw: "screen and (max-width: 450px)",
       },
       mq414: {
         raw: "screen and (max-width: 414px)",
       },
+      mq430: {
+        raw: "screen and (max-width: 430px)",
+      },
       mq375: {
         raw: "screen and (max-width: 375px)",
+      },
+      mw1680: {
+        raw: "screen and (min-width: 1680px)",
+      },
+      mw1440: {
+        raw: "screen and (min-width: 1440px)",
       },
       mw1024: {
         raw: "screen and (min-width: 1024px)",
@@ -123,6 +151,9 @@ export default {
       mw975: {
         raw: "screen and (min-width: 975px)",
       },
+      mw768: {
+        raw: "screen and (min-width: 768px)",
+      },
       mw750: {
         raw: "screen and (min-width: 750px)",
       },
@@ -134,6 +165,9 @@ export default {
       },
       mw450: {
         raw: "screen and (min-width: 450px)",
+      },
+      mw375: {
+        raw: "screen and (min-width: 375px)",
       },
 
     },

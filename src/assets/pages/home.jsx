@@ -10,6 +10,8 @@ import HomeBanner from "../components/Banner";
 import Promo from "../components/Promo";
 import Categories from "../components/Categories";
 import Activity from "../components/Activity";
+import Footer from "../components/footer";
+import AutoPlay from "../components/PromoSlider";
 
 
 export default function Home() {
@@ -34,13 +36,13 @@ export default function Home() {
                         className="w-[1404px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full"
                     >
                         <div
-                            className="pt-[150px] mq1050:pt-[40px] w-[1233.9px] flex flex-row mq750:flex-col mq414:flex-col items-center justify-center gap-[44px] max-w-full mq1050:items-center mq768:scale-75 mq768:pt-0 mq660:mt-[300px] mq450:mt-[300px] mq660:mb-[140px] mq450:mb-[140px] mq768:h-[700px] mq660:scale-100 mq660:gap-0 mq450:gap-0 mq450:scale-100"
+                            className="pt-[30px] w-[1233.9px] flex flex-row  items-center justify-center gap-[44px] max-w-full mw768:scale-75 mw768:pt-0 mq500:flex-col mq500:pt-[60px] mq500:gap-0 mw768:flex"
                         >
                             <div
-                                className="flex-1 flex flex-col items-start justify-start pt-16 px-0 pb-0 box-border min-w-[417px] max-w-full mq750:pt-[0px] mq750:box-border"
+                                className=" flex flex-col items-start justify-start pt-16 px-0 pb-0 box-border min-w-[417px] max-w-full mq1050:pt-0"
                             >
                                 <div
-                                    className="self-stretch flex flex-col items-start justify-start gap-[80px] shrink-0 max-w-full mq750:gap-[20px] mq1050:scale-75"
+                                    className="pl-[40px] self-stretch flex flex-col items-start justify-start gap-[80px] shrink-0 max-w-full mq500:scale-75 mq1050:gap-[40px] mq500:gap-[40px] mq500:pl-0 mq1050:scale-75"
                                 >
                                     <div
                                         className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full"
@@ -150,143 +152,17 @@ export default function Home() {
                     </div>
                 </div>
                 <div
-                    className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[150px] mq750:pb-[20px] box-border max-w-full text-center text-29xl text-grayscale-900 font-large-regular mq750:box-border"
+                    className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[150px] mq750:pb-[20px] box-border max-w-full text-center text-29xl text-grayscale-900 font-large-regular mq750:box-border mq500:pb-[60px]"
                 >
                     <Categories></Categories>
                 </div>
                 <div
                     className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[150px] box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular mq750:box-border mq1050:pb-[120px] mq750:pb-0 mq1050:box-border"
                 >
-                    <Promo></Promo>
+                    <Promo onOpenLoginModal={() => setLoginModalOpen(true)}></Promo>
                 </div>
                 <Activity></Activity>
-                <footer
-                    className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-grayscale-900 font-xtra-large-semibold"
-                >
-                    <div
-                        className="w-[1200px] flex flex-row items-start justify-between max-w-full gap-[20px] mq1050:flex-wrap mq750:justify-center"
-                    >
-                        <div
-                            className="w-[367px] flex flex-col items-start justify-center gap-[24px] max-w-full"
-                        >
-                            <div
-                                className="self-stretch flex flex-col items-start justify-start gap-[12px]"
-                            >
-                                <div className="flex flex-row items-center justify-center gap-[4px]">
-                                    <img
-                                        className="h-6 w-6 relative overflow-hidden shrink-0"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/radar-1.svg"
-                                    />
-
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[26px] font-semibold inline-block min-w-[64px]"
-                                    >
-                                        Gaskan.id
-                                    </div>
-                                </div>
-                                <div
-                                    className="self-stretch relative text-base tracking-[0.01em] leading-[24px] font-large-regular text-gray-400"
-                                >
-                                    Looking to travel the world? Here are some helpful tips to get
-                                    you started on your trip.
-                                </div>
-                            </div>
-                            <div className="flex flex-row items-start justify-start gap-[12px]">
-                                <img
-                                    className="h-6 w-6 relative min-h-[24px]"
-                                    loading="lazy"
-                                    alt=""
-                                    src="/facebook.svg"
-                                />
-
-                                <img
-                                    className="h-6 w-6 relative min-h-[24px]"
-                                    loading="lazy"
-                                    alt=""
-                                    src="/instagram.svg"
-                                />
-
-                                <img
-                                    className="h-6 w-6 relative min-h-[24px]"
-                                    loading="lazy"
-                                    alt=""
-                                    src="/linkedin.svg"
-                                />
-
-                                <img
-                                    className="h-6 w-6 relative min-h-[24px]"
-                                    loading="lazy"
-                                    alt=""
-                                    src="/twitter.svg"
-                                />
-                            </div>
-                        </div>
-                        <div
-                            className="w-[380px] flex flex-row items-start justify-start gap-[54px] max-w-full text-base mq750:flex-wrap mq750:gap-[27px]"
-                        >
-                            <div
-                                className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[71px]"
-                            >
-                                Discover
-                            </div>
-                            <div
-                                className="flex-1 flex flex-col items-end justify-start gap-[40px] min-w-[166px] mq750:gap-[20px]"
-                            >
-                                <div
-                                    className="self-stretch flex flex-row items-start justify-between gap-[20px]"
-                                >
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[36px]"
-                                    >
-                                        Blog
-                                    </div>
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[73px]"
-                                    >
-                                        About us
-                                    </div>
-                                    <div
-                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[33px]"
-                                    >
-                                        FAQ
-                                    </div>
-                                </div>
-                                <div
-                                    className="self-stretch flex flex-col items-start justify-start gap-[16px]"
-                                >
-                                    <div className="self-stretch flex flex-row items-start justify-end">
-                                        <div
-                                            className="relative tracking-[0.01em] leading-[24px] font-medium"
-                                        >
-                                            Join our community 🔥
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="self-stretch rounded-[90px] overflow-hidden flex flex-row items-start justify-start py-1.5 pr-[7px] pl-[15px] gap-[18px] border-[1px] border-solid border-whitesmoke-200"
-                                    >
-                                        <input
-                                            className="w-[calc(100%_-_46px)] [border:none] [outline:none] bg-[transparent] h-[26px] flex-1 flex flex-col items-start justify-start pt-1.5 px-0 pb-0 box-border font-large-regular text-sm text-gray-400 min-w-[109px]"
-                                            placeholder="Enter your email"
-                                            type="text"
-                                        />
-
-                                        <div
-                                            className="h-8 w-8 rounded-[100px] bg-primary-1 flex flex-row items-center justify-center p-1 box-border"
-                                        >
-                                            <img
-                                                className="h-6 w-6 relative overflow-hidden shrink-0"
-                                                alt=""
-                                                src="/iconsarrow-right-2line.svg"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <Footer></Footer>
             </div>
 
             {SignupSuccessModalopen ? <SignupSuccessModal onClose={() => setSignupSuccessModal(false)} openLogin={() => setLoginModalOpen(true)} ></SignupSuccessModal> : null}

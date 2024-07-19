@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function HomeBanner() {
-    const [detail, setDetail] = useState({})
+    const [detail, setDetail] = useState([])
     const [detailtwo, setDetailTwo] = useState({})
     const [detailthree, setDetailThree] = useState({})
 
@@ -17,10 +20,9 @@ export default function HomeBanner() {
                     },
                 }
             );
-            setDetail(response.data.data[0]);
+            setDetail(response.data.data);
             setDetailTwo(response.data.data[1])
             setDetailThree(response.data.data[4])
-
         } catch (error) {
             console.log(error);
         }
@@ -30,34 +32,34 @@ export default function HomeBanner() {
         getBanner();
     }, []);
 
+    const settings = {
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        fadeSpeed: 3000,
+
+    };
+
     return (
-        <div className="h-[768px] mq450:h-[700px] w-[548.9px] relative shrink-0 max-w-full z-[1] flex items-end justify-center mq1050:scale-75 mq450:scale-[.68]">
-            <div className=" animate-bounce overflow-hidden absolute z-[2] rounded-full bg-green-700 w-[230px] h-[230px] mb-[530px] ml-[100px] bg-opacity-20 border-8 border-white">
-                <img
-                    className=" scale-[2.5] mix-blend-overlay"
-                    loading="lazy"
-                    alt=""
-                    src={detailtwo.imageUrl}
-                />
-            </div>
-            <div className=" animate-bounce overflow-hidden absolute z-[2] rounded-full bg-green-700 w-[140px] h-[140px] mb-[400px] ml-[420px] mq414:ml-[360px] bg-opacity-20 border-8 border-white">
-                <img
-                    className=" scale-[2.5] mix-blend-overlay"
-                    loading="lazy"
-                    alt=""
-                    src={detailthree.imageUrl}
-                />
-            </div>
-            <div
-                className=" overflow-hidden border-8 border-white h-[693px] w-[460px] relative shrink-0 max-w-full z-[1] flex items-center justify-center rounded-t-full bg-green-700 bg-opacity-20"
-            >
-                <img
-                    className=" scale-[2.5] mix-blend-overlay mq450:scale-[3]"
-                    loading="lazy"
-                    alt=""
-                    src={detail.imageUrl}
-                />
-            </div>
+        <div className="h-[768px] w-[548.9px] relative shrink-0 max-w-full flex items-end justify-center mw375:scale-[.70] mw375:h-[580px]">
+
+            <Slider {...settings} className="!w-[460px]">
+                {detail.map((item) => (<div
+                    className=" overflow-hidden border-8 border-white h-[690px] w-[460px] relative shrink-0 max-w-full flex items-center justify-center rounded-t-full bg-green-700 bg-opacity-20"
+                >
+                    <div className="overflow-hidden border-8 border-white h-[693px] w-[460px] relative shrink-0 max-w-full flex items-center justify-center rounded-t-full bg-green-700 bg-opacity-20">
+                        <img
+                            className="h-[693px] w-[] mix-blend-overlay mq500:scale-[3] object-cover"
+                            loading="lazy"
+                            alt=""
+                            src={item.imageUrl}
+                        />
+                    </div>
+                </div>))}
+            </Slider>
         </div>
     );
 }

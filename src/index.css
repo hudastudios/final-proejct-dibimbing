@@ -19,3 +19,7 @@
   src: url("/GeneralSans-Bold.otf");
   font-weight: 600;
 }
+
+.slick-track {
+  width: 460px;
+}

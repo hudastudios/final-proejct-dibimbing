@@ -3,11 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
-export default function AutoPlay() {
+export default function AutoPlay({ onOpenLoginModal }) {
     const [detail, setDetail] = useState([])
-
+    const token = localStorage.getItem('access_token');
     const getPromo = async () => {
 
         try {
@@ -36,109 +37,140 @@ export default function AutoPlay() {
         currency: 'IDR',
     })
 
+    const breakpoint = {
+        // Small screen / phone
+        sm: 576,
+        // Medium screen / tablet
+        md: 768,
+        // Large screen / desktop
+        lg: 992,
+        // Extra large screen / wide desktop
+        xl: 1200
+    };
+
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 4000,
+        // speed: 4000,
         autoplaySpeed: 4000,
-        cssEase: "linear"
+        cssEase: "linear",
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 520,
+                settings: {
+                    className: "center",
+                    infinite: true,
+                    centerPadding: "120px",
+                    slidesToShow: 3,
+                    swipeToSlide: true,
+                    autoplay: true,
+                    afterChange: function (index) {
+                        console.log(
+                            `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+                        );
+                    }
+                }
+            }
+        ]
     };
 
     return (
         <div className="flex items-center justify-center ">
             <div className=" w-[1160px] h-[420px] [mask-image:_linear-gradient(to_right,transparent_0,_black_20px,_black_calc(100%-20px),transparent_100%)]">
                 <Slider {...settings}>
-                    {detail.map((item) => (<div className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01]">
-                        <div className="flex flex-col items-center gap-2">
-                            <div className="z-[2] w-[282px] h-[282px] overflow-hidden rounded-xl bg-green-700 bg-opacity-20">
-                                <img
-                                    className="z-[1] w-[282px] h-[282px] mix-blend-overlay rounded-xl object-cover"
-                                    loading="lazy"
-                                    alt=""
-                                    src={item.imageUrl}
-                                />
-                            </div>
+                    {detail.map((item) => (
+                        <Link to={token ? `/PromoDetail/${item?.id}` : null} onClick={token ? () => reload() : onOpenLoginModal} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">
+                            <div className="flex flex-col items-center gap-2 mq500:w-[282px] mq500:ml-[60px]">
+                                <div className="z-[2] w-[282px] h-[282px] overflow-hidden rounded-xl bg-green-700 bg-opacity-20">
+                                    <img
+                                        className="z-[1] w-[282px] h-[282px] mix-blend-overlay rounded-xl object-cover"
+                                        loading="lazy"
+                                        alt=""
+                                        src={item.imageUrl}
+                                    />
+                                </div>
 
-                            <div
-                                className="self-stretch flex flex-row items-start justify-start py-0 px-4"
-                            >
                                 <div
-                                    className="flex-1 flex flex-col justify-start gap-[4px]"
+                                    className="self-stretch flex flex-row items-start justify-start py-0 px-4"
                                 >
                                     <div
-                                        className="self-stretch flex flex-row items-start justify-between gap-[20px]"
+                                        className="flex-1 flex flex-col justify-start gap-[4px]"
                                     >
                                         <div
-                                            className="text-[20px] truncate w-[200px] tracking-[0.01em] leading-[28px] font-medium mq750:text-base mq750:leading-[22px]"
+                                            className="self-stretch flex flex-row items-start justify-between gap-[20px]"
                                         >
-                                            {item.title}
+                                            <div
+                                                className="text-[20px] truncate w-[200px] tracking-[0.01em] leading-[28px] font-medium mq750:text-base mq750:leading-[22px]"
+                                            >
+                                                {item.title}
+                                            </div>
+                                            <div
+                                                className="flex flex-row items-start justify-start gap-[3px] text-base"
+                                            >
+                                                <div
+                                                    className="flex flex-col items-start justify-start pt-1 px-0 pb-0"
+                                                >
+                                                    <img
+                                                        className="w-4 h-4 relative"
+                                                        loading="lazy"
+                                                        alt=""
+                                                        src="/star.svg"
+                                                    />
+                                                </div>
+                                                <div
+                                                    className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[24px]"
+                                                >
+                                                    4.8
+                                                </div>
+                                            </div>
                                         </div>
                                         <div
-                                            className="flex flex-row items-start justify-start gap-[3px] text-base"
+                                            className=" text-[16px] truncate w-[250px] text-base tracking-[0.01em] leading-[24px] text-gray-400 inline-block min-w-[72px]"
                                         >
-                                            <div
-                                                className="flex flex-col items-start justify-start pt-1 px-0 pb-0"
-                                            >
-                                                <img
-                                                    className="w-4 h-4 relative"
-                                                    loading="lazy"
-                                                    alt=""
-                                                    src="/star.svg"
-                                                />
-                                            </div>
-                                            <div
-                                                className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[24px]"
-                                            >
-                                                4.8
-                                            </div>
+                                            {item.description}
                                         </div>
-                                    </div>
-                                    <div
-                                        className=" text-[16px] truncate w-[250px] text-base tracking-[0.01em] leading-[24px] text-gray-400 inline-block min-w-[72px]"
-                                    >
-                                        {item.description}
                                     </div>
                                 </div>
-                            </div>
-                            <div
-                                className="self-stretch flex flex-row items-start justify-start py-0 px-4"
-                            >
-                                <div className="h-px flex-1 relative bg-whitesmoke-200"></div>
-                            </div>
-                            <div
-                                className="self-stretch flex flex-row items-start justify-start py-0 px-4 text-base text-grayscale-400"
-                            >
                                 <div
-                                    className="flex flex-col items-start justify-between gap-[0px]"
+                                    className="self-stretch flex flex-row items-start justify-start py-0 px-4"
+                                >
+                                    <div className="h-px flex-1 relative bg-whitesmoke-200"></div>
+                                </div>
+                                <div
+                                    className="self-stretch flex flex-row items-start justify-start py-0 px-4 text-base text-grayscale-400"
                                 >
                                     <div
-                                        className="flex flex-col items-start justify-start pt-1 px-0 pb-0"
+                                        className="flex flex-col items-start justify-between gap-[0px]"
                                     >
                                         <div
-                                            className="relative tracking-[0.01em] leading-[24px] inline-block min-w-[67px]"
+                                            className="flex flex-col items-start justify-start pt-1 px-0 pb-0"
                                         >
-                                            <s>{(item.minimum_claim_price).toLocaleString('id-ID', {
+                                            <div
+                                                className="relative tracking-[0.01em] leading-[24px] inline-block min-w-[67px]"
+                                            >
+                                                <s>{(item.minimum_claim_price).toLocaleString('id-ID', {
+                                                    style: 'currency',
+                                                    currency: 'IDR'
+                                                })}</s>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="relative tracking-[0.01em] font-medium text-grayscale-900 inline-block min-w-[94px] whitespace-nowrap text-5xl"
+                                        >
+                                            <span className="text-[20px]">{(item.promo_discount_price).toLocaleString('id-ID', {
                                                 style: 'currency',
                                                 currency: 'IDR'
-                                            })}</s>
+                                            })}</span>
+                                            <span className="text-xs leading-[18px]"></span>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="relative tracking-[0.01em] font-medium text-grayscale-900 inline-block min-w-[94px] whitespace-nowrap text-5xl"
-                                    >
-                                        <span className="text-[20px]">{(item.promo_discount_price).toLocaleString('id-ID', {
-                                            style: 'currency',
-                                            currency: 'IDR'
-                                        })}</span>
-                                        <span className="text-xs leading-[18px]"></span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>))}
+                        </Link>))}
                 </Slider>
             </div>
         </div>
