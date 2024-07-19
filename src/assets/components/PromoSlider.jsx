@@ -129,7 +129,7 @@ export default function AutoPlay({ onOpenLoginModal }) {
                                             </div>
                                         </div>
                                         <div
-                                            className=" text-[16px] truncate w-[250px] text-base tracking-[0.01em] leading-[24px] text-gray-400 inline-block min-w-[72px]"
+                                            className=" text-[16px] truncate w-[250px] tracking-[0.01em] leading-[24px] text-gray-400 inline-block min-w-[72px]"
                                         >
                                             {item.description}
                                         </div>
