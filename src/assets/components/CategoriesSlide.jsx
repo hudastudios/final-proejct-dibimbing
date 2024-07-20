@@ -77,7 +77,7 @@ function CategoriesSlide() {
     };
     return (
         <div className="flex justify-center items-center gap-[200px] ">
-            <div className="h-[150px] w-[1120px] mq500:w-[600px] mq500:ml-[162px]">
+            <div className="h-[150px] w-[1120px] mq500:w-[600px] mq1050:w-[px]">
                 <Slider {...settings} className="">
                     {detail.map((item) => (<div className="hover:scale-[1.2] mq500:hover:scale-100"
                     >
@@ -91,7 +91,7 @@ function CategoriesSlide() {
                                 />
                             </div>
                             <div
-                                className="flex-1 flex flex-col items-start mq500:items-center mq500:justify-center mq1050:items-center mq750:items-start justify-start min-w-[88px]"
+                                className="flex-1 flex flex-col items-start mq500:items-center mq500:justify-center mq1050:items-start mq750:items-start justify-start min-w-[88px]"
                             >
                                 <div
                                     className="font-medium text-[18px]"

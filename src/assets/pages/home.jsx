@@ -157,7 +157,7 @@ export default function Home() {
                     <Categories></Categories>
                 </div>
                 <div
-                    className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[150px] box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular mq750:box-border mq1050:pb-[120px] mq750:pb-0 mq1050:box-border"
+                    className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[150px] box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular mq750:box-border mq1050:pb-[120px] mq750:pb-0 mq1050:box-border mq1050:scale-[.6] mq500:scale-[1] mq500:-mt-[40px] mq1050:-mt-[280px]"
                 >
                     <Promo onOpenLoginModal={() => setLoginModalOpen(true)}></Promo>
                 </div>

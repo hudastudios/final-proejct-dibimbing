@@ -1,10 +1,10 @@
 export default function Footer() {
     return (
         <footer
-            className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-grayscale-900 font-xtra-large-semibold mq500:-mt-[140px]"
+            className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-grayscale-900 font-xtra-large-semibold mq500:-mt-[80px]"
         >
             <div
-                className="w-[1200px] flex flex-row items-start justify-between max-w-full gap-[20px] mq1050:flex-wrap mq750:justify-center"
+                className="w-[1200px] flex flex-row items-start justify-between max-w-full gap-[20px] mq1050:flex-row mq500:flex-col mq750:justify-center"
             >
                 <div
                     className="w-[367px] flex flex-col items-start justify-center gap-[24px] max-w-full"

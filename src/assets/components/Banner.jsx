@@ -44,7 +44,7 @@ export default function HomeBanner() {
     };
 
     return (
-        <div className="h-[768px] w-[548.9px] relative shrink-0 max-w-full flex items-end justify-center mw375:scale-[.70] mw375:h-[580px]">
+        <div className="h-[768px] w-[548.9px] relative shrink-0 max-w-full flex items-end justify-center mq1050:scale-[.70] mq1050:h-[580px] mq1050:-mb-[60px]">
 
             <Slider {...settings} className="!w-[460px]">
                 {detail.map((item) => (<div

@@ -133,39 +133,39 @@ export default {
       mq375: {
         raw: "screen and (max-width: 375px)",
       },
-      mw1680: {
-        raw: "screen and (min-width: 1680px)",
-      },
-      mw1440: {
-        raw: "screen and (min-width: 1440px)",
-      },
-      mw1024: {
-        raw: "screen and (min-width: 1024px)",
-      },
-      mw1050: {
-        raw: "screen and (min-width: 1050px)",
-      },
-      mw1150: {
-        raw: "screen and (min-width: 1150px)",
-      },
-      mw975: {
-        raw: "screen and (min-width: 975px)",
-      },
+      // mw1680: {
+      //   raw: "screen and (min-width: 1680px)",
+      // },
+      // mw1440: {
+      //   raw: "screen and (min-width: 1440px)",
+      // },
+      // mw1024: {
+      //   raw: "screen and (min-width: 1024px)",
+      // },
+      // mw1050: {
+      //   raw: "screen and (min-width: 1050px)",
+      // },
+      // mw1150: {
+      //   raw: "screen and (min-width: 1150px)",
+      // },
+      // mw975: {
+      //   raw: "screen and (min-width: 975px)",
+      // },
       mw768: {
         raw: "screen and (min-width: 768px)",
       },
       mw750: {
         raw: "screen and (min-width: 750px)",
       },
-      mw725: {
-        raw: "screen and (min-width: 725px)",
-      },
-      mw650: {
-        raw: "screen and (min-width: 650px)",
-      },
-      mw450: {
-        raw: "screen and (min-width: 450px)",
-      },
+      // mw725: {
+      //   raw: "screen and (min-width: 725px)",
+      // },
+      // mw650: {
+      //   raw: "screen and (min-width: 650px)",
+      // },
+      // mw450: {
+      //   raw: "screen and (min-width: 450px)",
+      // },
       mw375: {
         raw: "screen and (min-width: 375px)",
       },

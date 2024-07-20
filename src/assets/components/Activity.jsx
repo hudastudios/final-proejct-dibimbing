@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 export default function Activity() {
     return (
         <div
-            className="self-stretch flex flex-row mq750:flex-col items-start justify-center pt-0 pb-[150px] mq500:pb-0 pr-[21px] pl-5 box-border max-w-full text-left text-lg text-mediumseagreen-200 font-large-regular mq750:pb-[101px] mq750:box-border mq1050:pb-[120px] mq1050:box-border"
+            className="self-stretch flex flex-row mq750:flex-col items-start justify-center pt-0 pb-[150px] mq500:pb-0 pr-[21px] pl-5 box-border max-w-full text-left text-lg text-mediumseagreen-200 font-large-regular mq750:pb-[101px] mq750:box-border mq1050:pb-[120px] mq1050:box-border mq1050:scale-75 mq1050:-mt-[240px] mq500:scale-[.8] mq500:-mt-[160px]"
         >
             <div
-                className="w-[1199px] mq500:h-[1100px] mq500:flex-col flex flex-row items-start justify-center gap-[96px] max-w-full lg:gap-[48px] mq1050:gap-0 mq750:gap-[0px] mq1050:flex-wrap"
+                className="w-[1199px] mq500:h-[1100px] mq500:flex-col flex flex-row items-start justify-center gap-[96px] max-w-full lg:gap-[48px] mq1050:gap-0 mq750:gap-[0px] mq1050:flex-row"
             >
                 <div
-                    className="h-[583px] mq500:-mt-[40px] w-[530px] flex flex-row items-start justify-center relative min-w-[530px] max-w-full mq750:min-w-full mq1050:flex-1"
+                    className="h-[583px] mq500:mt-[80px] w-[530px] flex flex-row items-start justify-center relative min-w-[530px] max-w-full mq750:min-w-full mq1050:flex-1 mq1050:scale-[0.9] mq500:scale-[1.2]"
                 >
                     <ActivitySlide></ActivitySlide>
                 </div>
                 <div
-                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[120px]"
+                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[40px] mq1050:scale-110"
                 >
                     <div
-                        className="self-stretch flex flex-col items-start justify-start gap-[40px] max-w-full  mq1050:scale-75 mq750:gap-[20px] mq500:items-center"
+                        className="self-stretch flex flex-col items-start justify-start gap-[40px] max-w-full  mq1050:scale-75 mq750:gap-[20px] mq500:items-center mq500:gap-[30px]"
                     >
                         <div
-                            className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full mq500:items-center mq500:justify-center"
+                            className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full mq500:items-center mq500:justify-center mq500:gap-[30px]"
                         >
                             <div className="flex flex-row items-start justify-start gap-[11px]">
                                 <div

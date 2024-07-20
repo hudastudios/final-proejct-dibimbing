@@ -5,7 +5,7 @@ export default function Promo({ onOpenLoginModal }) {
 
     return (
         <div
-            className="w-[1200px] flex flex-col items-start mq500:items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] px-[20px] mq500:px-0 "
+            className="w-[1200px] flex flex-col items-start mq500:items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] px-[20px] mq500:px-0 mq1050:items-center "
         >
             < div
                 className="self-stretch flex flex-row items-start justify-between mq1050:justify-center max-w-full gap-[20px] mq1050:flex-wrap"

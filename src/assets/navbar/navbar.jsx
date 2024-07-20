@@ -18,7 +18,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
     return (
         <div className="fixed top-0 left-0 right-0 z-[100] self-center items-center justify-center mq500:z-0 mq500:h-0">
             <div
-                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 box-border space-x-[321.5px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq500:space-x-[180px] mq1050:space-x-[200px] ">
+                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 box-border space-x-[321.5px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq500:space-x-[180px] mq1050:space-x-[200px] mq1440:space-x-[460px] ">
                 <Link to='/'>
                     <div
                         className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0"
@@ -41,10 +41,10 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                     </div>
                 </Link>
                 <nav
-                    className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden mw1440:w-[800px] "
+                    className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden "
                 >
                     <nav
-                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mw768:gap-[80px] mw1680:gap-[200px]"
+                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq1440:gap-[200px] mq1050:gap-[80px]"
                     >
                         <Link to='/'>
                             <div
