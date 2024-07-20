@@ -84,7 +84,7 @@ export default function AutoPlay({ onOpenLoginModal }) {
                 <Slider {...settings}>
                     {detail.map((item) => (
                         <Link to={token ? `/PromoDetail/${item?.id}` : null} onClick={token ? () => reload() : onOpenLoginModal} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">
-                            <div className="flex flex-col items-center gap-2 mq500:w-[282px] mq500:ml-[60px]">
+                            <div className="flex flex-col items-center gap-2 mq500:w-[282px] mq500:ml-[50px]">
                                 <div className="z-[2] w-[282px] h-[282px] overflow-hidden rounded-xl bg-green-700 bg-opacity-20">
                                     <img
                                         className="z-[1] w-[282px] h-[282px] mix-blend-overlay rounded-xl object-cover"

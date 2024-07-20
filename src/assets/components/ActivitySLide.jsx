@@ -50,7 +50,7 @@ function ActivitySlide() {
                     className="!w-[460px] h-[583px]"
                 >
 
-                    <div className="w-[460px] h-[583px] z-[1] bg-green-700 bg-opacity-20 rounded-211xl">
+                    <div className="w-[460px] h-[583px] z-[1] bg-green-700 bg-opacity-20 rounded-211xl mq500:scale-[0.6]">
                         <img
                             className="z-[2] opacity-100 mix-blend-overlay absolute h-full top-[0px] bottom-[0px] left-[0px] rounded-211xl max-h-full w-[460px] object-cover"
                             alt=""

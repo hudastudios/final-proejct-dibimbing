@@ -56,7 +56,7 @@ function CategoriesSlide() {
                 }
             },
             {
-                breakpoint: 430,
+                breakpoint: 460,
                 settings: {
                     className: "center",
                     infinite: true,
@@ -77,7 +77,7 @@ function CategoriesSlide() {
     };
     return (
         <div className="flex justify-center items-center gap-[200px] ">
-            <div className="h-[150px] w-[1120px] mq500:w-[600px] mq500:ml-[0px]">
+            <div className="h-[150px] w-[1120px] mq500:w-[600px] mq500:ml-[162px]">
                 <Slider {...settings} className="">
                     {detail.map((item) => (<div className="hover:scale-[1.2] mq500:hover:scale-100"
                     >
