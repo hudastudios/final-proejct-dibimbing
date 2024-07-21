@@ -3,7 +3,7 @@ import CategoriesSlide from "./CategoriesSlide";
 export default function Categories() {
     return (
         <div
-            className="flex-1 flex flex-col items-center justify-center pt-[150px] mq500:pt-0 mq1050:pt-[80px] pb-0 px-5 box-border gap-[40px] max-w-full mq750:gap-[20px] mq750:pt-[78px] mq750:pb-[78px] mq750:box-border mq500:scale-[.8] mq500:-mt-0 mq1050:scale-[.6] mq1050:-mt-[160px] mq1440:pt-[40px]"
+            className="flex-1 flex flex-col items-center justify-center pt-[150px] mq500:pt-0 mq1050:pt-[80px] pb-0 px-5 box-border gap-[40px] max-w-full mq750:gap-[20px] mq750:pt-[78px] mq750:pb-[78px] mq750:box-border mq500:scale-[.8] mq500:-mt-0 mq1050:scale-[.6] mq1050:-mt-[160px] mq2560:pt-[40px]"
         >
             <div
                 className="w-[634px] mq750:max-w-[320px] flex flex-col items-center justify-start gap-[16px] max-w-full"

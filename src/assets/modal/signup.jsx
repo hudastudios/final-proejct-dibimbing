@@ -174,7 +174,7 @@ export default function SignupModal({ onClose, openLogin, onOpenSuccessModal, cl
     return (
         <div>
             <div className="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-10">
-                <div ref={ref} className="bg-white shadow-2xl rounded-3xl w-[1200px] mq660:w-[680px] h-[690px] mq660:h-[1200px] flex flex-col items-center p-[40px] mq1050:scale-75 mq1440:scale-90 mq768:scale-50">
+                <div ref={ref} className="bg-white shadow-2xl rounded-3xl w-[1200px] mq660:w-[680px] h-[690px] mq660:h-[1200px] flex flex-col items-center p-[40px] mq1050:scale-75 mq2560:scale-90 mq768:scale-50">
                     <div className="flex flex-col h-[120px] mq660:h-[140px]">
                         <div className="flex flex-row items-center justify-center gap-[4px]">
                             <img

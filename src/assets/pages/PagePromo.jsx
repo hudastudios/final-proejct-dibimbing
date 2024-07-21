@@ -47,7 +47,7 @@ export default function PagePromo() {
         currency: 'IDR',
     })
     return (
-        <div className=" pb-[5rem]">
+        <div className=" pb-[5rem] mq500:pb-[60px]">
             <div>
                 <Navbar></Navbar>
                 <div className="pt-[100px]">
@@ -58,7 +58,7 @@ export default function PagePromo() {
                             className="w-[1200px] flex flex-col items-start justify-center gap-[32px] max-w-full text-left text-sm text-grayscale-900 font-large-regular mq750:gap-[16px]"
                         >
                             <div
-                                className="flex flex-row items-start justify-start pt-0 px-0 pb-2 gap-[7.5px] text-center"
+                                className="flex flex-row items-start justify-start pt-0 px-0 pb-2 gap-[7.5px] text-center  mq1050:pl-[100px] mq500:pl-0"
                             >
                                 <Link to='/'>
                                     <div
@@ -94,7 +94,7 @@ export default function PagePromo() {
                                     className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-2 box-border max-w-full"
                                 >
                                     <div
-                                        className="flex-1 flex flex-col items-start justify-start py-0 pr-5 pl-0 box-border gap-[16px] max-w-full"
+                                        className="flex-1 flex flex-col items-start justify-start py-0 pr-5 pl-0 box-border gap-[16px] max-w-full mq1050:pl-[100px] mq500:pl-0"
                                     >
                                         <h1
                                             className="m-0 w-[624px] relative text-inherit tracking-[0.01em] leading-[64px] font-semibold font-inherit inline-block max-w-full mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
@@ -125,7 +125,7 @@ export default function PagePromo() {
                             </div>
                             {/* <div className=""></div> */}
                             <div
-                                className="self-stretch flex flex-wrap w-[1180px] items-start justify-start text-xs font-body-text-small-semibold"
+                                className="self-stretch flex flex-wrap items-start justify-start text-xs font-body-text-small-semibold mq1050:ml-[120px] mq1050:gap-[60px] mq1050:pb-[60px] mq500:mb-[40px] mq500:ml-0 mq500:justify-center"
                             >
                                 {detail.map((item) => (
                                     <Link to={`/PromoDetail/${item?.id}`} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">

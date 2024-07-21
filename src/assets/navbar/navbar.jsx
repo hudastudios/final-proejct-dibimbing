@@ -18,7 +18,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
     return (
         <div className="fixed top-0 left-0 right-0 z-[100] self-center items-center justify-center mq500:z-0 mq500:h-0">
             <div
-                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 box-border space-x-[321.5px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq500:space-x-[180px] mq1050:space-x-[200px] mq1440:space-x-[460px] ">
+                className="Header bg-white self-stretch [backdrop-filter:blur(32px)] [background:linear-gradient(180deg,_rgba(252,_252,_253,_0.8),_#fcfcfd)] flex flex-row items-center justify-center py-6 box-border space-x-[321.5px] top-[0] z-[99] sticky max-w-full text-left text-lg text-black font-xtra-large-semibold mq500:space-x-[180px] mq1050:space-x-[200px] mq2560:space-x-[460px] ">
                 <Link to='/'>
                     <div
                         className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0"
@@ -44,7 +44,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                     className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden "
                 >
                     <nav
-                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq1440:gap-[200px] mq1050:gap-[80px]"
+                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq2560:gap-[200px] mq1050:gap-[80px]"
                     >
                         <Link to='/'>
                             <div
@@ -143,27 +143,27 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                                 src={token ? foto : "/avatar.svg"}
                             />
                         </li>
-                        <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
+                        <Link to='/'>
+                            <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
 
-                            <div href="#about" onClick={() => setNavbar(!navbar)}>
-                                About
-                            </div>
-                        </li>
-                        <li className="text-xl text-black py-5 px-6 text-center  border-b md:border-b-0  hover:bg-black hover:text-white border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <div href="#about" onClick={() => setNavbar(!navbar)}>
+                                    Home
+                                </div>
+                            </li>
+                        </Link>
+                        <Link to='/Promo'>                        <li className="text-xl text-black py-5 px-6 text-center  border-b md:border-b-0  hover:bg-black hover:text-white border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
                             <div href="#blog" onClick={() => setNavbar(!navbar)}>
-                                Blogs
+                                Promo
                             </div>
                         </li>
-                        <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
-                            <div href="#contact" onClick={() => setNavbar(!navbar)}>
-                                Contact
-                            </div>
-                        </li>
-                        <li className="text-xl text-black py-5 px-6 text-center  border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300 border-spacing-3  md:hover:text-purple-600 md:hover:bg-transparent">
-                            <div href="#projects" onClick={() => setNavbar(!navbar)}>
-                                Projects
-                            </div>
-                        </li>
+                        </Link>
+                        <Link to='/Activity'>
+                            <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <div href="#contact" onClick={() => setNavbar(!navbar)}>
+                                    Activity
+                                </div>
+                            </li>
+                        </Link>
                         <div>
                             {token ? <li>
                                 <div className="flex flex-col items-center gap-4 pt-6" >

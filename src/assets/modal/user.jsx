@@ -42,7 +42,7 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
   }, [ref]);
 
   return (
-    <div className=' fixed inset-0 flex justify-end items-start pt-20 z-50 pr-28 mq2560:pr-[680px] mq1440:pr-[120px] mq1050:pr-10 mq750:hidden'>
+    <div className=' fixed inset-0 flex justify-end items-start pt-20 z-50 pr-28 mq2560:pr-[120px] mq1050:pr-10 mq750:hidden'>
       <div ref={ref}
         className="w-[332px] overflow-hidden shrink-0 rounded-xl bg-[#ffff] shadow-2xl flex flex-col items-start justify-start py-8 px-6 gap-[32px]"
       >

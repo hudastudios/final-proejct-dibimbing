@@ -98,7 +98,7 @@ export default function LoginModal({ onClose, openSignup }) {
             {token ? <LoginSuccessModal></LoginSuccessModal> :
                 <form>
                     <div className="fixed z-40 inset-0 flex items-center justify-center bg-black bg-opacity-10">
-                        <div ref={ref} className="bg-white shadow-2xl rounded-3xl w-[596px] h-[690px] flex flex-col items-center gap-[32px] p-[48px] mq1050:scale-75 mq1440:scale-90 mq750:scale-50">
+                        <div ref={ref} className="bg-white shadow-2xl rounded-3xl w-[596px] h-[690px] flex flex-col items-center gap-[32px] p-[48px] mq1050:scale-75 mq2560:scale-90 mq750:scale-50">
                             <div className="flex flex-row items-center justify-center gap-[4px]">
                                 <img
                                     className="h-6 w-6 relative overflow-hidden shrink-0"
