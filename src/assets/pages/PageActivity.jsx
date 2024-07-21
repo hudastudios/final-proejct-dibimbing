@@ -126,7 +126,7 @@ export default function PageActivity() {
                             {/* <div className=""></div> */}
 
                             <div
-                                className="self-stretch flex flex-wrap items-start justify-start text-xs font-body-text-small-semibold] mq1050:gap-[60px] mq1050:pb-[40px] mq500:mb-[60px] mq1050:ml-[120px] mq500:justify-center mq500:ml-0"
+                                className="self-stretch flex flex-wrap items-start justify-start text-xs font-body-text-small-semibold] mq1050:gap-[60px] mq1050:pb-[40px] mq500:mb-[60px] mq1050:justify-center mq1050:items-center mq500:justify-center mq500:ml-0"
                             >
                                 {detail.map((item) => (
                                     <Link to={`/ActivityDetail/${item?.id}`}>

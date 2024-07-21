@@ -125,7 +125,7 @@ export default function PagePromo() {
                             </div>
                             {/* <div className=""></div> */}
                             <div
-                                className="self-stretch flex flex-wrap items-start justify-start text-xs font-body-text-small-semibold mq1050:ml-[120px] mq1050:gap-[60px] mq1050:pb-[60px] mq500:mb-[40px] mq500:ml-0 mq500:justify-center"
+                                className="self-stretch flex flex-wrap items-start justify-start text-xs font-body-text-small-semibold mq1050:items-center mq1050:justify-center mq1050:gap-[60px] mq1050:pb-[60px] mq500:mb-[40px] mq500:ml-0 mq500:justify-center"
                             >
                                 {detail.map((item) => (
                                     <Link to={`/PromoDetail/${item?.id}`} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">
