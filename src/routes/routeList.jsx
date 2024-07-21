@@ -14,11 +14,11 @@ export const routeList = [
     },
     {
         path: '/Promo',
-        element: (<ProtectedRoute><PagePromo></PagePromo></ProtectedRoute>)
+        element: (<PagePromo></PagePromo>)
     },
     {
         path: '/Activity',
-        element: (<ProtectedRoute><PageActivity></PageActivity></ProtectedRoute>)
+        element: (<PageActivity></PageActivity>)
     },
     {
         path: '/PromoDetail/:id',
