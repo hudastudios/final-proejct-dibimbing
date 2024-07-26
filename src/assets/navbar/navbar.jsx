@@ -44,7 +44,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                     className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden "
                 >
                     <nav
-                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq2560:gap-[200px] mq1050:gap-[80px]"
+                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq2560:gap-[160px] mq1050:gap-[60px]"
                     >
                         <Link to='/'>
                             <div
@@ -62,6 +62,12 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                             <div onClick={token ? null : onOpenLoginModal}
                                 className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
                             >Activity
+                            </div>
+                        </Link>
+                        <Link to='/MyProfile'>
+                            <div onClick={token ? null : onOpenLoginModal}
+                                className={token ? "[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block" : 'hidden'}
+                            >Dashboard
                             </div>
                         </Link>
                     </nav>
@@ -164,6 +170,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                                 </div>
                             </li>
                         </Link>
+
                         <div>
                             {token ? <li>
                                 <div className="flex flex-col items-center gap-4 pt-6" >

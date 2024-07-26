@@ -13,15 +13,18 @@ export default function LoginModal({ onClose, openSignup }) {
     const [errorLogin, setErrorLogin] = useState(false);
     const [detail, setDetail] = useState({});
     const [foto, setFoto] = useState(null);
+    const [name, setName] = useState(null)
+    const [emaill, setEmaill] = useState(null)
+    const [phoneNumber, setPhoneNumber] = useState(null)
 
     //// Login
     const handleChangeEmail = (event) => {
-        console.log(event);
+        // console.log(event);
         setEmail(event.target.value);
     };
 
     const handleChangePassword = (event) => {
-        console.log(event);
+        // console.log(event);
         setPassword(event.target.value);
     };
 
@@ -45,7 +48,7 @@ export default function LoginModal({ onClose, openSignup }) {
                 }
             );
             setDetail(response.data.data);
-            console.log(response);
+            // console.log(response);
 
             const token = response.data.token;
 
@@ -59,15 +62,25 @@ export default function LoginModal({ onClose, openSignup }) {
 
             const name = response.data.data.name
 
-            setFoto(name);
+            setName(name);
             localStorage.setItem('access_name', name);
+
+            const emaill = response.data.data.email
+
+            setEmaill(emaill);
+            localStorage.setItem('access_email', emaill);
+
+            const phoneNumber = response.data.data.phoneNumber
+
+            setName(phoneNumber);
+            localStorage.setItem('access_phoneNumber', phoneNumber);
 
             setTimeout(() => {
                 onClose()
             }, 3000);
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             setErrorLogin(true)
         }
     };

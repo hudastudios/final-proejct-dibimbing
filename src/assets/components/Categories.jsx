@@ -1,8 +1,11 @@
 import CategoriesSlide from "./CategoriesSlide";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Categories() {
+    AOS.init();
     return (
-        <div
+        <div data-aos="fade-up" data-aos-duration="4000" data-aos-offset="300"
             className="flex-1 flex flex-col items-center justify-center pt-[150px] mq500:pt-0 mq1050:pt-[80px] pb-0 px-5 box-border gap-[40px] max-w-full mq750:gap-[20px] mq750:pt-[78px] mq750:pb-[78px] mq750:box-border mq500:scale-[.8] mq500:-mt-0 mq1050:scale-[.6] mq1050:-mt-[160px] mq2560:pt-[40px]"
         >
             <div

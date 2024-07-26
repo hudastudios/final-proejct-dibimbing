@@ -8,9 +8,7 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
   const name = localStorage.getItem('access_name');
 
   const handleLogout = () => {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('access_foto');
-    localStorage.removeItem('access_name');
+    localStorage.clear()
 
     setTimeout(() => {
       logoutmodal(), onClose()

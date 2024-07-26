@@ -12,6 +12,7 @@ import Categories from "../components/Categories";
 import Activity from "../components/Activity";
 import Footer from "../components/footer";
 import AutoPlay from "../components/PromoSlider";
+import Aos from "aos";
 
 
 export default function Home() {
