@@ -119,8 +119,8 @@ export default function MyProfileDashboard() {
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start">
-                    <div className='w-[440px] h-[470px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
+                <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start mq500:w-[340px]">
+                    <div className='w-[440px] h-[470px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto mq500:h-[470px] mq500:w-[300px]' >
                         <div className="h-full flex flex-col gap-10 items-center justify-center">
                             <div className="text-[26px]">My Profile</div>
                             <div className="w-[120px] h-[120px] rounded-full bg-gray-300">

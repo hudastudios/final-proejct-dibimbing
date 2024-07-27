@@ -11,6 +11,8 @@ import { HiOutlineUserGroup } from "react-icons/hi2";
 import { MdPictureInPicture } from "react-icons/md";
 import { BsFillMenuButtonWideFill } from "react-icons/bs";
 import { TbDiscount } from "react-icons/tb";
+import { LuActivitySquare } from "react-icons/lu";
+
 
 
 
@@ -21,9 +23,7 @@ export default function DashboardSidebar() {
         { name: "Banner", link: "/BannerDashboard", icon: MdPictureInPicture },
         { name: "Categories", link: "/CategoriesDashboard", icon: BsFillMenuButtonWideFill, margin: true },
         { name: "Promo", link: "/PromoDashboard", icon: TbDiscount },
-        { name: "Cart", link: "/", icon: FiShoppingCart },
-        { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
-        { name: "Setting", link: "/", icon: RiSettings4Line },
+        { name: "Activities", link: "/ActivityDashboard", icon: LuActivitySquare },
     ];
     const [open, setOpen] = useState(true);
 

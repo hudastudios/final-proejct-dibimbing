@@ -100,13 +100,14 @@ export default function DashboardUser() {
             .finally(() => setIsLoading(false));
     };
 
+    const ESTIMATED_ITEM_HEIGHT = 290
 
     return (
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
-            <div className="flex flex-col w-full bg-white gap-4">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg">
-                    <div className=" text-[20px] font-extrabold">USER LIST</div>
+            <div className="flex flex-col w-full bg-white gap-4 mq500:max-w-[320px]">
+                <div className="flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:px-0">
+                    <div className=" text-[20px] font-extrabold mq500:text-[16px]">USER LIST</div>
                     <input
                         className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center "
                         type="text"
@@ -114,10 +115,10 @@ export default function DashboardUser() {
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start mq500:max-w-[320px]">
                     {loading
                         ?
-                        <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                        <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start">
                             {detail.filter((user) => {
                                 return searchItem.toLowerCase() === ''
                                     ? user

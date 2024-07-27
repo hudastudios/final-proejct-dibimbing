@@ -64,7 +64,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                             >Activity
                             </div>
                         </Link>
-                        <Link to='/MyProfile'>
+                        <Link to='/DashboardUser'>
                             <div onClick={token ? null : onOpenLoginModal}
                                 className={token ? "[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block" : 'hidden'}
                             >Dashboard
@@ -167,6 +167,13 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                             <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
                                 <div href="#contact" onClick={() => setNavbar(!navbar)}>
                                     Activity
+                                </div>
+                            </li>
+                        </Link>
+                        <Link to='/DashboardUser'>
+                            <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <div href="#contact" onClick={() => setNavbar(!navbar)}>
+                                    Dashboard
                                 </div>
                             </li>
                         </Link>

@@ -10,6 +10,7 @@ import PromoDetail from "../assets/pages/PromoDetail"
 import ProtectedRoute from "./ProtectedRoute"
 import CategoriesDashboard from "../assets/Dashboard/CategoriesDashboard"
 import PromoDashboard from "../assets/Dashboard/PromoDashboard"
+import ActivityDashboard from "../assets/Dashboard/ActivityDashboard"
 
 export const routeList = [
 
@@ -56,5 +57,9 @@ export const routeList = [
     {
         path: '/PromoDashboard',
         element: <PromoDashboard></PromoDashboard>
+    },
+    {
+        path: '/ActivityDashboard',
+        element: <ActivityDashboard></ActivityDashboard>
     },
 ]
