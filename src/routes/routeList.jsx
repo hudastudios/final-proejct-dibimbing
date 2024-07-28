@@ -60,6 +60,6 @@ export const routeList = [
     },
     {
         path: '/ActivityDashboard',
-        element: <ActivityDashboard></ActivityDashboard>
+        element: <ProtectedRoute><ActivityDashboard></ActivityDashboard></ProtectedRoute>
     },
 ]

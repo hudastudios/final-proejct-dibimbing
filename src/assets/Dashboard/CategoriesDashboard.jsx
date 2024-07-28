@@ -316,7 +316,7 @@ export default function CategoriesDashboard() {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start gap-2 text-black pb-6 ">
-                                        <div className="font-medium text-[14px]"> Upload Profile Picture</div>
+                                        <div className="font-medium text-[14px]"> Upload Picture</div>
                                         <div className="flex gap-4 items-center">
                                             <input
                                                 onChange={handleUpload}
