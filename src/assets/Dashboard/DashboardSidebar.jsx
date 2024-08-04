@@ -25,12 +25,12 @@ export default function DashboardSidebar() {
         { name: "Promo", link: "/PromoDashboard", icon: TbDiscount },
         { name: "Activities", link: "/ActivityDashboard", icon: LuActivitySquare },
     ];
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     return (
-        <section className="flex gap-6 max-h-full">
+        <section className="flex gap-6 h-[1400px] mq450:max-h-[932px] mq1440:max-h-[900px]">
             <div
-                className={` bg-white  ${open ? "w-72" : "w-16"
+                className={` bg-blue-200  ${open ? "w-72" : "w-16"
                     } duration-500 text-black px-4`}
             >
                 <div className="py-3 flex justify-end">

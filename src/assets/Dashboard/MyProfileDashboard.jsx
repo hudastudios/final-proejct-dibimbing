@@ -109,8 +109,8 @@ export default function MyProfileDashboard() {
     return (
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
-            <div className="flex flex-col w-full bg-white h-[700px] gap-4">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg">
+            <div className="flex flex-col w-full bg-white h-[700px] mq2560:h-[1400px] mq500:max-h-[932px] gap-4">
+                <div className="flex w-full h-[60px] items-center justify-between mq500:justify-center px-[100px] mq500:px-0 shadow-lg">
                     <div className=" text-[20px] font-extrabold">EDIT MY PROFILE</div>
                     <input
                         className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center hidden "
@@ -120,8 +120,8 @@ export default function MyProfileDashboard() {
                     />
                 </div>
                 <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start mq500:w-[340px]">
-                    <div className='w-[440px] h-[470px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto mq500:h-[470px] mq500:w-[300px]' >
-                        <div className="h-full flex flex-col gap-10 items-center justify-center">
+                    <div className='w-[440px] h-[470px] mq500:w-[300px] mq500:h-[330px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto mq500:h-[470px] mq500:w-[300px]' >
+                        <div className="h-full flex flex-col gap-10 items-center justify-center mq500:scale-75">
                             <div className="text-[26px]">My Profile</div>
                             <div className="w-[120px] h-[120px] rounded-full bg-gray-300">
                                 <img className="w-[120px] h-[120px] border-blue-400 border-8 rounded-full shadow-2xl" src={photo} alt="" />
@@ -140,14 +140,14 @@ export default function MyProfileDashboard() {
                         </div>
 
                     </div>
-                    <div className='w-[440px] h-[470px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
-                        <div className="h-full flex flex-col gap-2 items-center justify-center">
+                    <div className='w-[440px] h-[470px] mq500:w-[300px] mq500:h-[330px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
+                        <div className="h-full flex flex-col gap-2 items-center justify-center mq500:scale-75">
                             <div className="flex flex-col items-start gap-2 text-black">
                                 <div className="font-medium text-[14px]">Name</div>
                                 <input
                                     onChange={handleNameChange}
                                     type="text"
-                                    className="w-[300px] mq660:w-[600px] h-[56px] border border-gray-400 p-4 rounded-3xl"
+                                    className="w-[300px] mq660:w-[600px] mq500:w-[300px] h-[56px] border border-gray-400 p-4 rounded-3xl"
                                     placeholder={nama}>
                                 </input>
                             </div>
@@ -156,7 +156,7 @@ export default function MyProfileDashboard() {
                                 <input
                                     onChange={handleEmailChange}
                                     type="text"
-                                    className="w-[300px] mq660:w-[600px] h-[56px] border border-gray-400 p-4 rounded-3xl"
+                                    className="w-[300px] mq660:w-[600px] mq500:w-[300px] h-[56px] border border-gray-400 p-4 rounded-3xl"
                                     placeholder={emaill}>
                                 </input>
                             </div>
@@ -165,7 +165,7 @@ export default function MyProfileDashboard() {
                                 <input
                                     onChange={handlePhoneNumberChange}
                                     type="text"
-                                    className="w-[300px] mq660:w-[600px] h-[56px] border border-gray-400 p-4 rounded-3xl"
+                                    className="w-[300px] mq660:w-[600px] mq500:w-[300px] h-[56px] border border-gray-400 p-4 rounded-3xl"
                                     placeholder={phoneNumberr}>
                                 </input>
                             </div>
@@ -175,7 +175,7 @@ export default function MyProfileDashboard() {
                                     <input
                                         onChange={handleUpload}
                                         type="file"
-                                        className="bg-white block w-[300px] mq660:w-[600px] pl-4 h-[56px] text-sm text-gray-900 border border-gray-300 rounded-3xl cursor-pointer file:my-2 file:mr-6 file:border-spacing-4 file:border-black file:rounded-3xl file:bg-black file:text-white file:py-1 file:px-2"
+                                        className="bg-white block w-[300px] mq500:w-[300px] mq660:w-[600px] pl-4 h-[56px] text-sm text-gray-900 border border-gray-300 rounded-3xl cursor-pointer file:my-2 file:mr-6 file:border-spacing-4 file:border-black file:rounded-3xl file:bg-black file:text-white file:py-1 file:px-2"
                                         accept=".png, .jpeg, .jpg"
                                         placeholder=""
                                     >

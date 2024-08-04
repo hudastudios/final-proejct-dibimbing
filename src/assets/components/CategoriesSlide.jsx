@@ -76,7 +76,7 @@ function CategoriesSlide() {
 
     };
     return (
-        <div className="flex justify-center items-center gap-[200px] ">
+        <div data-aos="fade-left" data-aos-duration="4000" data-aos-offset="300" className="flex justify-center items-center gap-[200px]  ">
             <div className="h-[150px] w-[1120px] mq500:w-[600px] mq1050:w-[px]">
                 <Slider {...settings} className="">
                     {detail.map((item) => (<div className="hover:scale-[1.2] mq500:hover:scale-100"

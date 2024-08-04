@@ -1,10 +1,13 @@
 import AutoPlay from "./PromoSlider";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Promo({ onOpenLoginModal }) {
 
     return (
         <div
+            data-aos="fade-up" data-aos-duration="4000" data-aos-offset="300"
             className="w-[1200px] flex flex-col items-start mq500:items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] px-[20px] mq500:px-0 mq1050:items-center "
         >
             < div

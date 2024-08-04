@@ -105,8 +105,8 @@ export default function DashboardUser() {
     return (
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
-            <div className="flex flex-col w-full bg-white gap-4 mq500:max-w-[320px]">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:px-0">
+            <div className="flex flex-col w-full bg-white gap-4 mq500:max-w-[320px] mq500:max-h-[932px]">
+                <div className="flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:px-0 mq500:py-4">
                     <div className=" text-[20px] font-extrabold mq500:text-[16px]">USER LIST</div>
                     <input
                         className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center "
@@ -115,10 +115,10 @@ export default function DashboardUser() {
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start mq500:max-w-[320px]">
+                <div className="w-full h-[700px] mq1050:h-[1366px]  overflow-scroll flex flex-wrap justify-center items-start mq500:max-w-[320px]">
                     {loading
                         ?
-                        <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start">
+                        <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start mq1440:max-h-[900px]">
                             {detail.filter((user) => {
                                 return searchItem.toLowerCase() === ''
                                     ? user
@@ -165,42 +165,6 @@ export default function DashboardUser() {
                             ></l-spiral>
                         </div>
                     }
-                    {detail.filter((user) => {
-                        return searchItem.toLowerCase() === ''
-                            ? user
-                            : user?.name?.toLowerCase().includes(searchItem.toLowerCase())
-                    }
-                    ).map((user) => (
-                        <div onClick={() => openDialog(user.id, user.role)} className='w-[260px] h-[290px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
-                            <div className="h-full flex flex-col gap-2 items-center justify-center">
-                                <div className="w-[120px] h-[120px] rounded-full bg-gray-300">
-                                    <img className="w-[120px] h-[120px] rounded-full" src={user?.profilePictureUrl} alt="" />
-                                </div>
-                                <div>{user?.name}</div>
-                                <div className="flex flex-col gap-2">
-                                    <div className="flex items-center gap-2">
-                                        <MdEmail size={20}></MdEmail>
-                                        <div>{user?.email}</div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <FaPhoneAlt size={16}></FaPhoneAlt>
-                                        <div>{user?.phoneNumber}</div>
-                                    </div>
-                                </div>
-                                <div className="flex gap-2">
-                                    <select
-                                        onChange={handleRoleChange}
-                                        className="w-[100px] h-[40px] p-2 text-[12px] border border-green-400 rounded-3xl">
-                                        <option value='' disabled selected>{user?.role}</option>
-                                        <option value="admin">Admin</option>
-                                        <option value="user">User</option>
-                                    </select>
-                                    <button onClick={updateRole} className="bg-[#0A82FD] text-white px-4 py-2 rounded-3xl">change role</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    ))}
                 </div>
             </div>
         </div>

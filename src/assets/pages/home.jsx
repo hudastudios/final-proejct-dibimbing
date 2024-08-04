@@ -11,8 +11,8 @@ import Promo from "../components/Promo";
 import Categories from "../components/Categories";
 import Activity from "../components/Activity";
 import Footer from "../components/footer";
-import AutoPlay from "../components/PromoSlider";
-import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Home() {
@@ -37,13 +37,13 @@ export default function Home() {
                         className="w-[1404px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full"
                     >
                         <div
-                            className="pt-[30px] w-[1404.9px] flex flex-row  items-center justify-center gap-[44px] max-w-full mq2560:scale-[0.8] mq1050:scale-[0.75] mq500:scale-100 mw768:pt-0 mq500:flex-col mq500:pt-[60px] mq500:gap-0 mw768:flex"
+                            className="pt-[30px] w-[1404.9px] flex flex-row  items-center justify-center gap-[44px] max-w-full mq2560:scale-[0.9] mq1050:scale-[0.75] mq500:scale-100 mw768:pt-0 mq500:flex-col mq500:pt-[60px] mq500:gap-0 mw768:flex"
                         >
                             <div
                                 className=" flex flex-col items-start justify-start pt-16 px-0 pb-0 box-border min-w-[417px] max-w-full mq1050:pt-0"
                             >
                                 <div
-                                    className="pl-[40px] self-stretch flex flex-col items-start justify-start gap-[80px] shrink-0 max-w-full mq500:scale-75 mq1050:gap-[40px] mq500:gap-[40px] mq500:pl-0 mq1050:scale-75"
+                                    data-aos="fade-right" data-aos-duration="4000" data-aos-offset="300" className="pl-[40px] self-stretch flex flex-col items-start justify-start gap-[80px] shrink-0 max-w-full mq500:scale-75 mq1050:gap-[40px] mq500:gap-[40px] mq500:pl-0 mq1050:scale-75"
                                 >
                                     <div
                                         className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full"

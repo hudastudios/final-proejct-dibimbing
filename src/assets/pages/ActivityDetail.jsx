@@ -4,15 +4,10 @@ import { useState, useEffect } from "react";
 import LoginModal from "../modal/login";
 import SignupModal from "../modal/signup";
 import LogOutSuccess from "../modal/LogOutSuccessModal";
-import LoginSuccessModal from "../modal/LoginSuccessModal";
 import SignupSuccessModal from "../modal/SignupSuccessModal";
-import HomeBanner from "../components/Banner";
-import Promo from "../components/Promo";
-import Categories from "../components/Categories";
-import Activity from "../components/Activity";
 import Footer from "../components/footer";
 import AutoPlay from "../components/PromoSlider";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function ActivityDetail() {
@@ -28,8 +23,6 @@ export default function ActivityDetail() {
 
     const param = useParams();
 
-    // console.log(param?.id);
-
     const getPromoDetail = () => {
         axios.get(
             `https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/activity/${param?.id}`,
@@ -42,41 +35,17 @@ export default function ActivityDetail() {
             .then((res) => {
                 console.log(res.data.data);
                 const response = res?.data?.data;
-                // const page = res?.data?.page;
 
                 setDetail(response)
             })
             .catch((err) => {
                 console.log(err);
             });
-        // async () => {
-
-        //     try {
-        //         const response = await axios.get(
-        //             `https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/promo/${param?.id}`,
-        //             {
-        //                 headers: {
-        //                     apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
-        //                 },
-        //             }
-        //         );
-        //         setDetail(response?.data.data);
-        //         console.log(response?.data);
-
-        //     } catch (error) {
-        //         console.log(error);
-        //     }
-        // };
     };
 
     useEffect(() => {
         getPromoDetail();
     }, []);
-
-    // const minimumPrice = (detail.promo_discount_price).toLocaleString('id-ID', {
-    //     style: 'currency',
-    //     currency: 'IDR'
-    // })
 
     const formatter = new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -233,58 +202,6 @@ export default function ActivityDetail() {
                                                     {detail.title},&nbsp;&nbsp;&nbsp;{detail.province}
                                                 </h1>
                                                 <h1>{detail.description}</h1>
-                                                {/* <div
-                                                className="flex flex-row items-start justify-start gap-[24px] text-base text-grayscale-300-400 mq450:flex-wrap"
-                                            >
-                                                <div
-                                                    className="flex flex-row items-center justify-center gap-[7px]"
-                                                >
-                                                    <img
-                                                        className="h-6 w-6 relative min-h-[24px]"
-                                                        loading="lazy"
-                                                        alt=""
-                                                        src="/profile2user1.svg"
-                                                    />
-
-                                                    <div
-                                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[68px]"
-                                                    >
-                                                        2 Guests
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="flex flex-row items-center justify-center gap-[7px]"
-                                                >
-                                                    <img
-                                                        className="h-6 w-6 relative min-h-[24px]"
-                                                        loading="lazy"
-                                                        alt=""
-                                                        src="/flag.svg"
-                                                    />
-
-                                                    <div
-                                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[79px]"
-                                                    >
-                                                        1 Bedroom
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="flex flex-row items-center justify-center gap-[7px]"
-                                                >
-                                                    <img
-                                                        className="h-6 w-6 relative min-h-[24px]"
-                                                        loading="lazy"
-                                                        alt=""
-                                                        src="/flag.svg"
-                                                    />
-
-                                                    <div
-                                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[100px]"
-                                                    >
-                                                        1 Private bath
-                                                    </div>
-                                                </div>
-                                            </div> */}
                                             </div>
                                             <div
                                                 className="self-stretch flex flex-row items-start justify-start gap-[32px] text-center text-base mq750:flex-wrap"
@@ -582,11 +499,6 @@ export default function ActivityDetail() {
                                                 className="relative tracking-[0.01em] inline-block min-w-[121px] whitespace-nowrap"
                                             >
                                                 <s>
-                                                    {/* {(detail?.minimum_claim_price).toLocaleString('id-ID', {
-                                                    style: 'currency',
-                                                    currency: 'IDR'
-                                                })} */}
-                                                    {/* {detail.minimum_claim_price} */}
                                                     {formatter.format(detail?.price)}
                                                 </s>
                                                 <span className="text-sm text-gray-700 leading-[20px] font-medium"
@@ -596,11 +508,7 @@ export default function ActivityDetail() {
                                                 className="relative tracking-[0.01em] text-grayscale-900 inline-block min-w-[121px] whitespace-nowrap"
                                             >
                                                 <span className="text-[30px] font-semibold">
-                                                    {/* {(detail?.promo_discount_price).toLocaleString('id-ID', {
-                                                    style: 'currency',
-                                                    currency: 'IDR'
-                                                })} */}
-                                                    {/* {detail.promo_discount_price} */}
+
                                                     {formatter.format(detail?.price_discount)}
                                                 </span>
                                                 <span className="text-sm leading-[20px] font-medium"
@@ -610,52 +518,9 @@ export default function ActivityDetail() {
                                         <div
                                             className="self-stretch flex flex-col items-start justify-start gap-[24px] text-center text-grayscale-900"
                                         >
-                                            {/* <div
-                                            className="flex flex-col items-start justify-start gap-[8px]"
-                                        >
-                                            <div className="relative tracking-[0.01em] leading-[24px]">
-                                                <span className="font-semibold">5 Nights</span>
-                                                <span className="font-medium"> </span>
-                                                <span>in Pasir putih resort</span>
-                                            </div>
-                                            <div
-                                                className="relative text-sm tracking-[0.01em] leading-[20px] text-grayscale-300-400"
-                                            >
-                                                Feb 8, 2023 - Feb 13, 2023
-                                            </div>
-                                        </div> */}
                                             <div
                                                 className="self-stretch flex flex-col items-start justify-start gap-[32px] text-left text-sm"
                                             >
-                                                {/* <div
-                                                className="relative tracking-[0.01em] leading-[20px] font-medium inline-block min-w-[41px]"
-                                            >
-                                                Guest
-                                            </div> */}
-                                                {/* <div
-                                                className="self-stretch rounded-13xl bg-whitesmoke flex flex-row items-center justify-between py-3.5 px-6 gap-[20px] text-base border-[1px] border-solid border-base-line"
-                                            >
-                                                <div
-                                                    className="flex flex-row items-start justify-start gap-[8px]"
-                                                >
-                                                    <img
-                                                        className="h-6 w-6 relative min-h-[24px]"
-                                                        alt=""
-                                                        src="/profile2user.svg"
-                                                    />
-
-                                                    <div
-                                                        className="relative tracking-[0.01em] leading-[24px] font-medium inline-block min-w-[59px]"
-                                                    >
-                                                        2 Guest
-                                                    </div>
-                                                </div>
-                                                <img
-                                                    className="h-6 w-6 relative min-h-[24px]"
-                                                    alt=""
-                                                    src="/arrowdown.svg"
-                                                />
-                                            </div> */}
                                             </div>
                                         </div>
                                         <div
@@ -671,33 +536,11 @@ export default function ActivityDetail() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* <div
-                                        className="flex flex-row items-center justify-center gap-[6px] text-grayscale-400"
-                                    >
-                                        <img
-                                            className="h-6 w-6 relative min-h-[24px]"
-                                            loading="lazy"
-                                            alt=""
-                                            src="/flag-2.svg"
-                                        />
-
-                                        <div
-                                            className="relative tracking-[0.01em] leading-[24px] font-medium"
-                                        >
-                                            Report this listing
-                                        </div>
-                                    </div> */}
                                     </div>
                                 </div>
                                 <div
                                     dangerouslySetInnerHTML={{ __html: replacing() }} className="self-stretch h-[568px] rounded-2xl flex flex-row items-start justify-start bg-cover bg-no-repeat bg-[top] max-w-full]"
                                 >
-                                    {/* <img
-                                    className="w-[1200px] relative rounded-2xl max-h-full object-cover hidden max-w-full"
-                                    alt=""
-                                    src="/image-primary@2x.png"
-                                /> */}
-
                                 </div>
                             </div>
                         </div>
