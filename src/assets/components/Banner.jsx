@@ -54,7 +54,7 @@ export default function HomeBanner() {
                 >
                     <div className="overflow-hidden border-8 border-white h-[693px] w-[460px] relative shrink-0 max-w-full flex items-center justify-center rounded-t-full bg-green-700 bg-opacity-20">
                         <img
-                            className="h-[693px] w-[] mix-blend-overlay mq500:scale-[3] object-cover"
+                            className="h-[693px] w-[] mix-blend-overlay object-cover"
                             loading="lazy"
                             alt=""
                             src={item.imageUrl}
