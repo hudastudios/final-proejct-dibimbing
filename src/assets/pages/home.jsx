@@ -37,10 +37,10 @@ export default function Home() {
                         className="w-[1404px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full"
                     >
                         <div
-                            className="pt-[30px] w-[1404.9px] flex flex-row  items-center justify-center gap-[44px] max-w-full mq2560:scale-[0.9] mq1050:scale-[0.75] mq500:scale-100 mw768:pt-0 mq500:flex-col mq500:pt-[60px] mq500:gap-0 mw768:flex"
+                            className="pt-[30px] w-[1404.9px] flex flex-row  items-center justify-center gap-[44px] max-w-full mq2560:scale-[0.9] mq1050:scale-[0.7] mq500:scale-100 mw768:pt-0 mq500:flex-col mq500:pt-[60px] mq500:gap-0 mw768:flex"
                         >
                             <div
-                                className=" flex flex-col items-start justify-start pt-16 px-0 pb-0 box-border min-w-[417px] max-w-full mq1050:pt-0"
+                                className=" flex flex-col items-start justify-start pt-16 px-0 pb-0 box-border min-w-[417px] max-w-full mq1050:pt-0 mq1050:scale-[0.7]"
                             >
                                 <div
                                     data-aos="fade-right" data-aos-duration="4000" data-aos-offset="300" className="pl-[40px] self-stretch flex flex-col items-start justify-start gap-[80px] shrink-0 max-w-full mq500:scale-75 mq1050:gap-[40px] mq500:gap-[40px] mq500:pl-0 mq1050:scale-75"
@@ -153,12 +153,12 @@ export default function Home() {
                     </div>
                 </div>
                 <div
-                    className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[150px] mq750:pb-[20px] box-border max-w-full text-center text-29xl text-grayscale-900 font-large-regular mq750:box-border mq500:pb-[60px]"
+                    className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[150px] mq750:pb-[20px] box-border max-w-full text-center text-29xl text-grayscale-900 font-large-regular mq750:box-border mq500:pb-[60px] mq1050:scale-[0.7] mq500:scale-[0.8]"
                 >
                     <Categories></Categories>
                 </div>
                 <div
-                    className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[150px] box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular mq750:box-border mq1050:pb-[120px] mq750:pb-0 mq1050:box-border mq1050:scale-[.6] mq500:scale-[1] mq500:-mt-[40px] mq1050:-mt-[280px]"
+                    className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[150px] box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular mq750:box-border mq1050:pb-[120px] mq750:pb-0 mq1050:box-border mq1050:scale-[.6] mq500:scale-[1] mq500:-mt-[40px] mq1050:-mt-[200px]"
                 >
                     <Promo onOpenLoginModal={() => setLoginModalOpen(true)}></Promo>
                 </div>

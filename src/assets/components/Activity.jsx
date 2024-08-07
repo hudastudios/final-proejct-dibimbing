@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default function Activity() {
     return (
         <div
-            className="self-stretch flex flex-row mq750:flex-col items-start justify-center pt-0 pb-[150px] mq500:pb-0 pr-[21px] pl-5 box-border max-w-full text-left text-lg text-mediumseagreen-200 font-large-regular mq750:pb-[101px] mq750:box-border mq1050:pb-[120px] mq1050:box-border mq1050:scale-75 mq1050:-mt-[240px] mq500:scale-[.8] mq500:-mt-[160px]"
+            className="self-stretch flex flex-row mq750:flex-col items-start justify-center pt-0 pb-[150px] mq500:pb-0 pr-[21px] pl-5 box-border max-w-full text-left text-lg text-mediumseagreen-200 font-large-regular mq750:pb-[101px] mq750:box-border mq1050:pb-[120px] mq1050:box-border mq1050:scale-[.6] mq1050:-mt-[240px] mq500:scale-[.8]  mq500:-mt-[160px]"
         >
             <div
-                className="w-[1199px] mq500:h-[1100px] mq500:flex-col flex flex-row items-start justify-center gap-[96px] max-w-full lg:gap-[48px] mq1050:gap-0 mq750:gap-[0px] mq1050:flex-row"
+                className="w-[1199px] mq500:h-[1100px] mq500:flex-col flex flex-row items-start justify-center gap-[96px] max-w-full lg:gap-[48px] mq1050:gap-[120px] mq750:gap-[0px] mq1050:flex-row"
             >
                 <div
                     data-aos="fade-right" data-aos-duration="4000" data-aos-offset="300"
@@ -16,7 +16,7 @@ export default function Activity() {
                     <ActivitySlide></ActivitySlide>
                 </div>
                 <div
-                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[40px] mq1050:scale-110"
+                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[40px] mq1050:scale-110 mq500:scale-[.9]"
                 >
                     <div
                         data-aos="fade-left" data-aos-duration="4000" data-aos-offset="300"
