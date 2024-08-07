@@ -16,7 +16,7 @@ export default function Activity() {
                     <ActivitySlide></ActivitySlide>
                 </div>
                 <div
-                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[80px] mq1050:scale-110 mq500:scale-[.9]"
+                    className="flex-1 flex flex-col items-start justify-start pt-[110.5px] px-0 pb-0 box-border min-w-[372px] max-w-full mq750:min-w-full mq750:pt-[0px] mq750:box-border mq500:-mt-[120px] mq1050:scale-110 mq500:scale-[.9]"
                 >
                     <div
                         data-aos="fade-left" data-aos-duration="4000" data-aos-offset="300"
