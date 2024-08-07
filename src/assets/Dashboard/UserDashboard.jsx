@@ -106,7 +106,7 @@ export default function DashboardUser() {
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
             <div className="flex flex-col w-full bg-white gap-4 mq500:max-w-[320px] mq500:max-h-[932px]">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:px-0 mq500:py-4">
+                <div className="fixed bg-white flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:pl-[140px] mq500:py-4">
                     <div className=" text-[20px] font-extrabold mq500:text-[16px]">USER LIST</div>
                     <input
                         className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center "
@@ -115,10 +115,10 @@ export default function DashboardUser() {
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full h-[700px] mq1050:h-[1366px]  overflow-scroll flex flex-wrap justify-center items-start mq500:max-w-[320px]">
+                <div className="w-full pt-[100px] overflow-scroll ml-[40px] mq500:ml-[80px] h-[700px] mq1050:h-[1366px] flex flex-wrap justify-center items-start mq500:max-w-[320px]">
                     {loading
                         ?
-                        <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1191px] overflow-scroll flex flex-wrap justify-center items-start mq1440:max-h-[900px]">
+                        <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1300px] flex flex-wrap justify-center items-start">
                             {detail.filter((user) => {
                                 return searchItem.toLowerCase() === ''
                                     ? user

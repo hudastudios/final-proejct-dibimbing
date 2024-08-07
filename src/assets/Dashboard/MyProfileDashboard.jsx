@@ -110,7 +110,7 @@ export default function MyProfileDashboard() {
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
             <div className="flex flex-col w-full bg-white h-[700px] mq2560:h-[1400px] mq500:max-h-[932px] gap-4">
-                <div className="flex w-full h-[60px] items-center justify-between mq500:justify-center px-[100px] mq500:px-0 shadow-lg">
+                <div className="fixed z-40 bg-white flex w-full h-[60px] items-center justify-between mq500:justify-center px-[100px] mq500:px-0 shadow-lg">
                     <div className=" text-[20px] font-extrabold">EDIT MY PROFILE</div>
                     <input
                         className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center hidden "
@@ -119,7 +119,7 @@ export default function MyProfileDashboard() {
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start mq500:w-[340px]">
+                <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start mq500:w-[340px] mt-[100px] mq500:ml-[80px]">
                     <div className='w-[440px] h-[470px] mq500:w-[300px] mq500:h-[330px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto mq500:h-[470px] mq500:w-[300px]' >
                         <div className="h-full flex flex-col gap-10 items-center justify-center mq500:scale-75">
                             <div className="text-[26px]">My Profile</div>

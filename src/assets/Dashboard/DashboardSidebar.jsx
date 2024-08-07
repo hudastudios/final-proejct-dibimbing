@@ -28,7 +28,7 @@ export default function DashboardSidebar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <section className="flex gap-6 h-[1400px] mq450:max-h-[932px] mq1440:max-h-[900px]">
+        <section className="fixed z-50 flex gap-6 h-[1400px] mq450:max-h-[932px] mq1440:max-h-[1366px]">
             <div
                 className={` bg-blue-200  ${open ? "w-72" : "w-16"
                     } duration-500 text-black px-4`}

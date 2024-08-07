@@ -238,7 +238,7 @@ export default function BannerDashboard() {
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
             <div className="flex flex-col w-full bg-white gap-4">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg">
+                <div className="fixed bg-white flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg mq500:flex-col mq1050:gap-[10px] mq1050:px-0 mq1050:pl-[80px] mq500:h-[120px]">
                     <div className=" text-[20px] font-extrabold">Banner</div>
 
                     <input
@@ -248,7 +248,7 @@ export default function BannerDashboard() {
                         placeholder='Type to search'
                     />
                     <button
-                        className="text-white bg-green-600 rounded-lg flex items-center gap-2 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="text-white bg-green-600 rounded-lg flex items-center gap-2 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 mq1050:text-[10px] mq1050:w-[190px]"
                         type="button"
                         onClick={() => setShowCreateModal(true)}
                     >
@@ -256,16 +256,16 @@ export default function BannerDashboard() {
                         <MdOutlineCreateNewFolder size={20} />
                     </button>
                 </div>
-                <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                <div className="w-full pt-[100px] overflow-scroll flex flex-wrap justify-center items-start">
                     {loading
                         ?
-                        <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                        <div className="w-full flex flex-wrap justify-center items-start mq500:ml-[70px] mq500:mt-[46px]">
                             {detail.filter((item) => {
                                 return searchItem.toLowerCase() === ''
                                     ? item
                                     : item?.name?.toLowerCase().includes(searchItem.toLowerCase())
                             }
-                            ).map((item) => (<div onClick={() => openDialog(item.id)} className='w-[480px] h-[286px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
+                            ).map((item) => (<div onClick={() => openDialog(item.id)} className=' mq500:w-[300px] w-[480px] h-[286px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto' >
                                 <div className="h-full flex flex-col gap-2 items-center justify-center">
                                     <div className="w-full h-[160px] rounded-lg bg-gray-300 overflow-hidden">
                                         <img className='w-[480px] h-[160px]' src={item.imageUrl} alt="" />
@@ -299,7 +299,7 @@ export default function BannerDashboard() {
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="mq500:scale-50 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 pb-0 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">
@@ -420,7 +420,7 @@ export default function BannerDashboard() {
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="mq500:scale-50 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 pb-0 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">
