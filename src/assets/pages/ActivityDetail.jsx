@@ -130,7 +130,7 @@ export default function ActivityDetail() {
                                         className="flex items-start justify-start mq750:min-w-full mq1050:flex-1"
                                     >
                                         <div
-                                            className="w-[1200px] flex items-center justify-between mq1050:w-[740px] mq500: px-[20px] mq500:flex-col mq500:items-start mq500:gap-[20px]"
+                                            className="w-[1200px] flex items-center justify-between mq1050:w-[740px] mq500: px-[20px] mq500:flex-col mq500:items-start mq500:gap-[20px] mq500:px-[40px] mq500:mt-[30px]"
                                         >
                                             <h1
                                                 className="m-0 self-stretch relative text-inherit tracking-[0.01em] leading-[64px] font-semibold font-inherit mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
@@ -185,7 +185,7 @@ export default function ActivityDetail() {
                                     />
                                 </div>
                                 <div
-                                    className="self-stretch flex flex-row items-start justify-start gap-[88px] py-[10px] px-[20px] max-w-full text-13xl lg:gap-[44px] mq750:gap-[22px] mq1050:flex-wrap"
+                                    className="self-stretch flex flex-row items-start justify-start gap-[88px] py-[10px] px-[20px] max-w-full text-13xl lg:gap-[44px] mq750:gap-[22px] mq1050:flex-wrap mq500:px-[40px]"
                                 >
                                     <div
                                         className="flex-1 flex flex-col items-start justify-start gap-[72px] min-w-[451px] max-w-full mq450:gap-[18px] mq750:gap-[36px] mq750:min-w-full"
@@ -292,7 +292,7 @@ export default function ActivityDetail() {
                                                     className="flex flex-col items-start justify-start gap-[8px] mq500:flex-row"
                                                 >
                                                     <div
-                                                        className="relative tracking-[0.01em] leading-[64px] font-semibold inline-block min-w-[73px] mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
+                                                        className="relative tracking-[0.01em] leading-[64px] font-semibold inline-block min-w-[73px] mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px] mq500:min-w-[26px]"
                                                     >
                                                         {detail.rating}
                                                     </div>
@@ -549,10 +549,10 @@ export default function ActivityDetail() {
                         className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular"
                     >
                         <div
-                            className="pt-[32px] pb-[120px] w-[1200px] flex flex-col items-center justify-start gap-[48px] max-w-full mq750:gap-[24px]"
+                            className="pt-[32px] pb-[120px] w-[1200px] flex flex-col items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] mq500:mt-[40px]"
                         >
                             <h1
-                                className=" w-[1200px] flex items-start m-0 h-16 relative text-inherit tracking-[0.01em] leading-[64px] font-semibold font-inherit max-w-full mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
+                                className=" w-[1200px] mq500:pl-[20px] flex items-start m-0 h-16 relative text-inherit tracking-[0.01em] leading-[64px] font-semibold font-inherit max-w-full mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
                             >
                                 Discover more
                             </h1>
