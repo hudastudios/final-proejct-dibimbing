@@ -692,7 +692,7 @@ export default function PromoDetail() {
                         className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-29xl text-grayscale-900 font-large-regular"
                     >
                         <div
-                            className="pt-[32px] pb-[120px] w-[1200px] flex flex-col items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] mq500:mt-[40px]"
+                            className="pt-[80px] mq500:pt-[30px] pb-[120px] w-[1200px] flex flex-col items-center justify-start gap-[48px] max-w-full mq750:gap-[24px] mq500:mt-[40px]"
                         >
                             <h1
                                 className=" w-[1200px] mq500:pl-[20px] flex items-start m-0 h-16 relative text-inherit tracking-[0.01em] leading-[64px] font-semibold font-inherit max-w-full mq450:text-10xl mq450:leading-[38px] mq1050:text-19xl mq1050:leading-[51px]"
