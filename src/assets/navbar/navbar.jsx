@@ -53,23 +53,28 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                             </div>
                         </Link>
                         <Link to='/Promo'>
-                            <div onClick={token ? null : onOpenLoginModal}
+                            <div
                                 className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
                             >Promo
                             </div>
                         </Link>
                         <Link to='/Activity'>
-                            <div onClick={token ? null : onOpenLoginModal}
+                            <div
                                 className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
                             >Activity
                             </div>
                         </Link>
-                        <Link to='/DashboardUser'>
-                            <div onClick={token ? null : onOpenLoginModal}
-                                className={token ? "[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block" : 'hidden'}
-                            >Dashboard
-                            </div>
-                        </Link>
+                        {token ?
+                            <Link to='/DashboardUser'>
+                                <div
+                                    className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
+                                >Dashboard
+                                </div>
+                            </Link>
+                            :
+                            null
+                        }
+
                     </nav>
                 </nav>
                 <div

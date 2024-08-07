@@ -50,7 +50,7 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
         <div
           className="self-stretch flex flex-col items-start justify-start gap-[16px]"
         >
-          <div
+          <Link to='/'
             className="self-stretch flex flex-row items-start justify-start gap-[4px]"
           >
             <img
@@ -66,11 +66,11 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
               <div
                 className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
               >
-                Booking
+                Home
               </div>
             </div>
-          </div>
-          <div
+          </Link>
+          <Link to='/Promo'
             className="self-stretch flex flex-row items-start justify-start gap-[4px]"
           >
             <img
@@ -86,11 +86,11 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
               <div
                 className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
               >
-                Wishlist
+                Promo
               </div>
             </div>
-          </div>
-          <div
+          </Link>
+          <Link to='/Activity'
             className="self-stretch flex flex-row items-start justify-start gap-[4px]"
           >
             <img
@@ -106,78 +106,40 @@ export default function UserModal({ onClose, onOpenLoginModal, onOpenSignupModal
               <div
                 className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
               >
-                Message
+                Activity
               </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div
           className="self-stretch h-px relative bg-whitesmoke-200"
         ></div>
-        <div
-          className="self-stretch flex flex-col items-start justify-start gap-[16px]"
-        >
-          <div
-            className="self-stretch flex flex-row items-start justify-start gap-[4px]"
+        {token ?
+          <Link to='/DashboardUser'
+            className="self-stretch flex flex-col items-start justify-start gap-[16px]"
           >
-            <img
-              className="h-10 w-10 relative"
-              loading="lazy"
-              alt=""
-              src="/notification--bell-3.svg"
-            />
-
             <div
-              className="flex-1 flex flex-col items-start justify-start pt-2 px-0 pb-0"
+              className="self-stretch flex flex-row items-start justify-start gap-[4px]"
             >
+              <img
+                className="h-10 w-10 relative"
+                loading="lazy"
+                alt=""
+                src="/notification--bell-3.svg"
+              />
+
               <div
-                className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
+                className="flex-1 flex flex-col items-start justify-start pt-2 px-0 pb-0"
               >
-                Host your home
+                <div
+                  className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
+                >
+                  Dashboard
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            className="self-stretch flex flex-row items-start justify-start gap-[4px]"
-          >
-            <img
-              className="h-10 w-10 relative"
-              loading="lazy"
-              alt=""
-              src="/notification--bell-4.svg"
-            />
+          </Link> : null}
 
-            <div
-              className="flex-1 flex flex-col items-start justify-start pt-2 px-0 pb-0"
-            >
-              <div
-                className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
-              >
-                Host an experience
-              </div>
-            </div>
-          </div>
-          <div
-            className="self-stretch flex flex-row items-start justify-start gap-[4px]"
-          >
-            <img
-              className="h-10 w-10 relative"
-              loading="lazy"
-              alt=""
-              src="/notification--bell-5.svg"
-            />
-
-            <div
-              className="flex-1 flex flex-col items-start justify-start pt-2 px-0 pb-0"
-            >
-              <div
-                className="self-stretch relative tracking-[0.01em] leading-[24px] font-medium"
-              >
-                Help
-              </div>
-            </div>
-          </div>
-        </div>
         <div
           className="flex flex-row items-center justify-center gap-[24px]"
         >
