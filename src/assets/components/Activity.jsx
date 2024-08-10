@@ -1,4 +1,4 @@
-import ActivitySlide from "./ActivitySLide";
+import ActivitySlide from "./ActivitySlider";
 import { Link } from "react-router-dom";
 
 export default function Activity() {

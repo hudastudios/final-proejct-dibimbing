@@ -6,14 +6,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-export default function AutoPlay({ onOpenLoginModal }) {
+export default function ActivitySliderPromoDetail({ onOpenLoginModal }) {
     const [detail, setDetail] = useState([])
     const token = localStorage.getItem('access_token');
     const getPromo = async () => {
 
         try {
             const response = await axios.get(
-                'https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/promos',
+                'https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/activities',
                 {
                     headers: {
                         apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
@@ -83,14 +83,14 @@ export default function AutoPlay({ onOpenLoginModal }) {
             <div className=" w-[1160px] h-[420px] [mask-image:_linear-gradient(to_right,transparent_0,_black_20px,_black_calc(100%-20px),transparent_100%)]">
                 <Slider {...settings}>
                     {detail.map((item) => (
-                        <Link to={`/PromoDetail/${item?.id}`} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">
+                        <Link to={`/ActivityDetail/${item?.id}`} className="flex flex-col items-center justify-center scale-[0.9] hover:scale-[1.01] mq660:hover:scale-[1.01]">
                             <div className="flex flex-col items-center gap-2 mq500:w-[282px] mq500:ml-[50px]">
                                 <div className="z-[2] w-[282px] h-[282px] overflow-hidden rounded-xl bg-green-700 bg-opacity-20">
                                     <img
                                         className="z-[1] w-[282px] h-[282px] mix-blend-overlay rounded-xl object-cover"
                                         loading="lazy"
                                         alt=""
-                                        src={item.imageUrl}
+                                        src={item.imageUrls}
                                     />
                                 </div>
 
@@ -152,7 +152,7 @@ export default function AutoPlay({ onOpenLoginModal }) {
                                             <div
                                                 className="relative tracking-[0.01em] leading-[24px] inline-block min-w-[67px]"
                                             >
-                                                <s>{(item.minimum_claim_price).toLocaleString('id-ID', {
+                                                <s>{(item.price).toLocaleString('id-ID', {
                                                     style: 'currency',
                                                     currency: 'IDR'
                                                 })}</s>
@@ -161,7 +161,7 @@ export default function AutoPlay({ onOpenLoginModal }) {
                                         <div
                                             className="relative tracking-[0.01em] font-medium text-grayscale-900 inline-block min-w-[94px] whitespace-nowrap text-5xl"
                                         >
-                                            <span className="text-[20px]">{(item.promo_discount_price).toLocaleString('id-ID', {
+                                            <span className="text-[20px]">{(item.price_discount).toLocaleString('id-ID', {
                                                 style: 'currency',
                                                 currency: 'IDR'
                                             })}</span>

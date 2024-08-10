@@ -11,6 +11,8 @@ import ProtectedRoute from "./ProtectedRoute"
 import CategoriesDashboard from "../assets/Dashboard/CategoriesDashboard"
 import PromoDashboard from "../assets/Dashboard/PromoDashboard"
 import ActivityDashboard from "../assets/Dashboard/ActivityDashboard"
+import CategoryById from "../assets/pages/ActivitiesByCategory"
+import Explore from "../assets/pages/Explore"
 
 export const routeList = [
 
@@ -39,6 +41,10 @@ export const routeList = [
         element: <ActivityDetail></ActivityDetail>
     },
     {
+        path: '/CategoryById/:id',
+        element: <CategoryById></CategoryById>
+    },
+    {
         path: '/DashboardUser',
         element: <DashboardUser></DashboardUser>
     },
@@ -61,5 +67,9 @@ export const routeList = [
     {
         path: '/ActivityDashboard',
         element: <ProtectedRoute><ActivityDashboard></ActivityDashboard></ProtectedRoute>
+    },
+    {
+        path: '/Explore',
+        element: <Explore></Explore>
     },
 ]

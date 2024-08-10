@@ -1,11 +1,8 @@
-import PaginationUser from "../components/PaginationUser";
 import DashboardSidebar from "./DashboardSidebar";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { data } from "autoprefixer";
-import ChangeRoleModal from "../modal/ChangeRoleModal";
 import toast from "react-hot-toast";
 import { spiral } from 'ldrs'
 
@@ -109,13 +106,13 @@ export default function DashboardUser() {
                 <div className="fixed bg-white flex w-full h-[60px] items-center justify-between px-[100px] mq500:justify-center mq500:gap-2 shadow-lg mq500:flex-col mq500:h-[80px] mq500:pl-[140px] mq500:py-4">
                     <div className=" text-[20px] font-extrabold mq500:text-[16px]">USER LIST</div>
                     <input
-                        className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center "
+                        className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center mq500:w-[250px]"
                         type="text"
                         onChange={(e) => setSearchItem(e?.target?.value)}
                         placeholder='Type to search'
                     />
                 </div>
-                <div className="w-full pt-[100px] overflow-scroll ml-[40px] mq500:ml-[80px] h-[700px] mq1050:h-[1366px] flex flex-wrap justify-center items-start mq500:max-w-[320px]">
+                <div className="w-full pt-[100px] overflow-scroll ml-[40px] mq500:ml-[70px] mq1050:h-[1366px] flex flex-wrap justify-center items-start mq500:max-w-[320px]">
                     {loading
                         ?
                         <div className="w-full h-[700px] mq1050:h-[1366px] mq2560:h-[1300px] flex flex-wrap justify-center items-start">

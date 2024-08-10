@@ -226,11 +226,11 @@ export default function CategoriesDashboard() {
         <div className="flex">
             <DashboardSidebar></DashboardSidebar>
             <div className="flex flex-col w-full bg-white gap-4">
-                <div className="flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg">
+                <div className="fixed bg-white flex w-full h-[60px] items-center justify-between px-[100px] shadow-lg mq500:flex-col mq1050:gap-[10px] mq1050:px-0 mq1050:pl-[70px] mq500:h-[120px]">
                     <div className=" text-[20px] font-extrabold">Categories</div>
 
                     <input
-                        className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center "
+                        className="h-[30px] border border-green-400 rounded-xl w-[300px] text-center mq500:w-[250px] "
                         type="text"
                         onChange={(e) => setSearchItem(e?.target?.value)}
                         placeholder='Type to search'
@@ -245,9 +245,9 @@ export default function CategoriesDashboard() {
                     </button>
                 </div>
 
-                <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                <div className="w-full pt-[100px] overflow-scroll flex flex-wrap justify-center items-start">
                     {loading ?
-                        <div className="w-full h-[700px] overflow-scroll flex flex-wrap justify-center items-start">
+                        <div className="w-full flex flex-wrap justify-center items-start mq500:pl-[70px] mq500:pt-[46px]">
                             {detail.filter((item) => {
                                 return searchItem.toLowerCase() === ''
                                     ? item
@@ -287,7 +287,7 @@ export default function CategoriesDashboard() {
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none mq500:scale-50">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 pb-0 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">
@@ -408,7 +408,7 @@ export default function CategoriesDashboard() {
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none mq500:scale-50">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 pb-0 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">

@@ -13,6 +13,7 @@ import Activity from "../components/Activity";
 import Footer from "../components/footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -77,7 +78,7 @@ export default function Home() {
                                             drinks? There
                                         </div>
                                     </div>
-                                    <button
+                                    <Link to='/Explore'
                                         className="cursor-pointer [border:none] py-3 px-5 bg-primary-1 w-[370px] rounded-13xl overflow-hidden flex flex-row items-start justify-center box-border whitespace-nowrap max-w-full z-[1] hover:bg-dodgerblue"
                                     >
                                         <div
@@ -85,7 +86,7 @@ export default function Home() {
                                         >
                                             Explore Now
                                         </div>
-                                    </button>
+                                    </Link>
                                     <div
                                         className="flex flex-row items-start justify-center gap-[13px] max-w-full text-xs text-gray-100 mq750:flex-wrap"
                                     >

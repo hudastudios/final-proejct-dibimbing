@@ -44,7 +44,7 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                     className="flex flex-row items-center justify-center pt-2 px-0 pb-0 mw768:w-[160px] mq750:hidden "
                 >
                     <nav
-                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mw1050:gap-[120px] mq2560:gap-[160px] mq1050:gap-[60px]"
+                        className=" self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-gray-1 font-large-regular mq2560:gap-[130px] mq1050:gap-[40px]"
                     >
                         <Link to='/'>
                             <div
@@ -62,6 +62,12 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                             <div
                                 className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
                             >Activity
+                            </div>
+                        </Link>
+                        <Link to='/Explore'>
+                            <div
+                                className="[text-decoration:none] relative tracking-[0.01em] font-medium text-[inherit] inline-block"
+                            >Explore
                             </div>
                         </Link>
                         {token ?

@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 

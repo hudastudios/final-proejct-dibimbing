@@ -169,6 +169,19 @@ export default {
       mw375: {
         raw: "screen and (min-width: 375px)",
       },
+      sm: {
+        raw: "screen and (min-width: 640px)",
+      },
+      md: {
+        raw: "screen and (min-width: 768px)",
+      },
+      lg: {
+        raw: "screen and (min-width: 1024px)",
+      },
+      xl: {
+        raw: "screen and (min-width: 1280px)",
+      },
+
 
     },
     corePlugins: {

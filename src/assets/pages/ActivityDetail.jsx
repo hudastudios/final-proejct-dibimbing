@@ -59,7 +59,9 @@ export default function ActivityDetail() {
         return replacePeta;
     }
 
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div>

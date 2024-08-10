@@ -1,11 +1,9 @@
 import DashboardSidebar from "./DashboardSidebar";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { IoChevronBack } from "react-icons/io5";
 
 export default function MyProfileDashboard() {
     const [email, setEmail] = useState("");
@@ -121,7 +119,7 @@ export default function MyProfileDashboard() {
                 </div>
                 <div className="w-full  overflow-scroll flex flex-wrap justify-center items-start mq500:w-[340px] mt-[100px] mq500:ml-[80px]">
                     <div className='w-[440px] h-[470px] mq500:w-[300px] mq500:h-[330px] bg-[#F3F9FF] rounded-xl border border-white shadow-xl mx-[40px] mb-[30px] overflow-auto mq500:h-[470px] mq500:w-[300px]' >
-                        <div className="h-full flex flex-col gap-10 items-center justify-center mq500:scale-75">
+                        <div className="h-full flex flex-col gap-10 items-center justify-center">
                             <div className="text-[26px]">My Profile</div>
                             <div className="w-[120px] h-[120px] rounded-full bg-gray-300">
                                 <img className="w-[120px] h-[120px] border-blue-400 border-8 rounded-full shadow-2xl" src={photo} alt="" />
