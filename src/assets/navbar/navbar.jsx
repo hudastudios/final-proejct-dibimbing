@@ -181,6 +181,13 @@ export default function Navbar({ onOpen, onOpenSignupModal, onOpenLoginModal, on
                                 </div>
                             </li>
                         </Link>
+                        <Link to='/Explore'>
+                            <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <div href="#contact" onClick={() => setNavbar(!navbar)}>
+                                    Explore
+                                </div>
+                            </li>
+                        </Link>
                         <Link to='/DashboardUser'>
                             <li className="text-xl text-black py-5 px-6 text-center border-b md:border-b-0  hover:bg-black hover:text-white  border-gray-300  md:hover:text-purple-600 md:hover:bg-transparent">
                                 <div href="#contact" onClick={() => setNavbar(!navbar)}>
